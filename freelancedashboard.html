@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <style>
-        
+         
         /* Custom CSS styles */
         body {
             font-family: Arial, sans-serif;
@@ -20,7 +20,7 @@
         }
 
         header {
-            background-color: #4267B2; /* Facebook blue */
+            background-color: #2e4a92; /* Facebook blue */
             color: #fff;
             padding: 10px 0;
             text-align: center;
@@ -504,13 +504,6 @@
     /* Feed Container */
    /* Custom CSS styles */
 
-header {
-    background-color: #4267B2; /* Facebook blue */
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    margin-bottom: 20px;
-}
 
 .search-container {
     position: relative;
@@ -762,9 +755,48 @@ header {
     margin-left: 10px;
 }
 
-/* File Container */
+/* posted File Container (video and images)*/
+
+
+
+
+
+.post-files img:hover,
+.post-files video:hover {
+    transform: scale(1.1);
+}
+
+/* Overlay for full-size image or video */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 999;
+}
+
+.overlay-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.overlay-image,
+.overlay-video {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* chech */
+
+
 .post-files {
-    max-width: 300px;
+    max-width: 30%;
+    /* background-color: red; */
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -776,15 +808,19 @@ header {
 
 /* Image */
 .post-image {
-    max-width: 100%;
+    max-width: 40%;
     height: auto;
     border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 /* Video */
 .post-video {
     max-width: 100%;
     border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 /* Comment Button */
@@ -823,6 +859,8 @@ header {
     border-radius: 10px;
 
 }
+
+/* feeds ends here */
 
 .available-jobs{
     background-color:  #fff;
@@ -888,51 +926,6 @@ header {
 /* posted files */
 
 
-.post-files {
-    max-width: 300px;
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.post-files img,
-.post-files video {
-    max-width: calc(50% - 5px);
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.post-files img:hover,
-.post-files video:hover {
-    transform: scale(1.1);
-}
-
-/* Overlay for full-size image or video */
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 999;
-}
-
-.overlay-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.overlay-image,
-.overlay-video {
-    max-width: 90%;
-    max-height: 90%;
-}
 
   
 
@@ -1039,6 +1032,69 @@ header {
     .randomusers-container::-webkit-scrollbar, .container::-webkit-scrollbar {
         display: none;
     }
+
+    /* css modal */
+    /* Modal CSS */
+
+    
+/* .modal-dialog {
+    max-width: 20%;
+    height: auto;
+    
+} */
+
+/* .modal-content {
+    width: 100%;
+} */
+
+/* .modal-body {
+    text-align: center;
+} */
+
+/* Adjust modal title */
+/* .modal-title {
+    text-align: center;
+} */
+
+/* Center the close button */
+/* .btn-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+} */
+
+/* Style for modal image */
+/*#modalImage {
+    max-width: 100%;
+    height: 100%;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+}*/
+
+/* Style for modal video */
+/*#modalVideo {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    display: block;
+} */
+
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+
+.buttons-container button,
+.buttons-container span {
+    margin-right: 10px;
+}
+    
     </style>
 </head>
 
@@ -1054,13 +1110,16 @@ header {
                             <a class="nav-link" href="dashboard.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./profile.html">Create Profile</a>
+                            <a class="nav-link" href="./profile.html">Eidt Profile</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Portfolio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./freelancer-search.html">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./messenger.html">Messenger</a>
                         </li>
                         <li class="nav-item">
                             <div class="search-container">
@@ -1239,6 +1298,22 @@ header {
                             <div class="feeds" id="feeds">
                                 <!-- Feed items will be dynamically added here -->
                             </div>
+                            <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="videoModalLabel">Video</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <video controls id="modalVideo" style="width: 100%; height: auto;">
+                                                <source src="" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                    
                             <!-- End of Feeds Section -->
@@ -1294,11 +1369,12 @@ header {
     </footer>
     
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- JavaScript for generating profile cards when there is no user -->
-     <script>
+    <script>
         // Define a default profile
         const defaultProfile = {
             id: 13,
@@ -1307,57 +1383,58 @@ header {
             skills: ["HTML", "CSS", "JavaScript"],
             img: "./freelance-images/uche.jpg",
             bio: "Experienced web developer with expertise in front-end technologies.",
-            profileLink: "./view-profile.html", // Replace this with the actual profile link
+            profileLink: "./view-portfolio-and-profile.html", // Updated link
         };
-
+    
         // Function to generate the profile card
         function generateDefaultProfileCard() {
             // Create elements for profile card
             let profileContainer = document.getElementById('profileContainer');
             let profileCard = document.createElement('div');
             profileCard.classList.add('profilearea', 'profilearea-profile-card');
-
+    
             // Profile image
             let profileImage = document.createElement('img');
             profileImage.src = defaultProfile.img;
             profileImage.classList.add('profilearea-profile-image');
             profileImage.alt = 'Profile Image';
-
+    
             // Profile name
             let profileName = document.createElement('h3');
             profileName.classList.add('profilearea-profile-name');
             profileName.textContent = defaultProfile.name;
-
+    
             // Profile category
             let profileCategory = document.createElement('h4');
             profileCategory.classList.add('profilearea-category');
             profileCategory.textContent = defaultProfile.category;
-
+    
             // Profile bio
             let profileInfo = document.createElement('p');
             profileInfo.classList.add('profilearea-item-text');
             profileInfo.textContent = defaultProfile.bio;
-
+    
             // View profile link
             let viewProfileLink = document.createElement('a');
-            viewProfileLink.href = defaultProfile.profileLink;
+            viewProfileLink.href = defaultProfile.profileLink; // Updated link
             viewProfileLink.classList.add('btn', 'btn-primary', 'profilearea-btn-primary');
             viewProfileLink.textContent = 'View Profile & Portfolio';
-
+    
             // Append elements to profile card
             profileCard.appendChild(profileImage);
             profileCard.appendChild(profileName);
             profileCard.appendChild(profileCategory);
             profileCard.appendChild(profileInfo);
             profileCard.appendChild(viewProfileLink);
-
+    
             // Append profile card to container
             profileContainer.appendChild(profileCard);
         }
-
+    
         // Call the function to generate the default profile card when the page loads
         window.onload = generateDefaultProfileCard;
     </script>
+    
  <!-- // Retrieve profile data from local storage profile signup-->
 <!-- <script>
         // Retrieve profile data from local storage
@@ -1640,7 +1717,7 @@ linkContainer.classList.add('link-container');
 
 // "Contact" link
 let viewProfileLink = document.createElement('a');
-viewProfileLink.href = 'mailto:' + profile.contact;
+viewProfileLink.href = "./messenger.html";
 viewProfileLink.classList.add('btn', 'btn-primary');
 viewProfileLink.textContent = 'Contact User';
 
@@ -1917,7 +1994,143 @@ function openOverlay(fileURL, fileType) {
 
 </script>
 
->
+<!-- defult posts for demo -->
+<script>
+ // Default array of posts
+const defaultPosts = [
+    {
+        id: 1,
+        content: "good day guys, am a fresh developer waiting to be employed, location lagos.",
+        image: "./freelance-images/developer.jpg",
+        video: null,
+        likes: 3,
+        comments: ["Great post!", "Really interesting!", "Thanks for sharing!"]
+    },
+    {
+        id: 2,
+        content: "hello good day.",
+        image: "./freelance-images/male cook.jpg",
+        video: null,
+        likes: 3,
+        comments: ["Nice picture!", "Awesome!", "Love it!"]
+    },
+    {
+        id: 3,
+        content: "gooday nigeria.",
+        image: null,
+        video: "./videos/default.mp4",
+        likes: 3,
+        comments: ["Cool video!", "Amazing!", "Very informative!"]
+    }
+];
+
+// Function to add posts to the feeds container
+function addDefaultPosts() {
+    const feedsContainer = document.getElementById("feeds");
+
+    // Loop through the default posts array
+    defaultPosts.forEach(post => {
+        const postElement = document.createElement("div");
+        postElement.classList.add("feed-item");
+
+        // Post content
+        const postContent = document.createElement("div");
+        postContent.classList.add("post-content");
+        postContent.textContent = post.content;
+        postElement.appendChild(postContent);
+
+        // Post image
+        if (post.image) {
+            const imageElement = document.createElement("img");
+            imageElement.src = post.image;
+            imageElement.classList.add("post-image");
+            imageElement.addEventListener('click', function () {
+                openOverlay(post.image, 'image');
+            });
+            postElement.appendChild(imageElement);
+        }
+
+        // Post video
+        if (post.video) {
+            const videoElement = document.createElement("video");
+            videoElement.src = post.video;
+            videoElement.controls = true;
+            videoElement.classList.add("post-video");
+            videoElement.addEventListener('click', function () {
+                openOverlay(post.video, 'video');
+            });
+            postElement.appendChild(videoElement);
+        }
+
+        // Like button and count
+        const likeButton = document.createElement("button");
+        likeButton.textContent = "Like";
+        likeButton.classList.add("like-btn");
+        const likeCount = document.createElement("span");
+        likeCount.textContent = post.likes;
+        likeCount.classList.add("like-count");
+        likeButton.addEventListener("click", () => handleLikeClick(postElement));
+        postElement.appendChild(likeButton);
+        postElement.appendChild(likeCount);
+
+        // Comment button and count
+        const commentButton = document.createElement("button");
+        commentButton.textContent = "Comment";
+        commentButton.classList.add("comment-btn");
+        const commentCount = document.createElement("span");
+        commentCount.textContent = post.comments.length;
+        commentCount.classList.add("comment-count");
+        commentButton.addEventListener("click", () => handleCommentClick(postElement));
+        postElement.appendChild(commentButton);
+        postElement.appendChild(commentCount);
+
+        // Comment input
+        const commentInput = document.createElement("input");
+        commentInput.setAttribute("type", "text");
+        commentInput.classList.add("comment-input");
+        commentInput.setAttribute("placeholder", "Add a comment...");
+        postElement.appendChild(commentInput);
+
+        // Comment list
+        const commentList = document.createElement("div");
+        commentList.classList.add("post-comments");
+        post.comments.forEach(comment => {
+            const commentElement = document.createElement("div");
+            commentElement.textContent = comment;
+            commentList.appendChild(commentElement);
+        });
+        postElement.appendChild(commentList);
+
+        feedsContainer.appendChild(postElement);
+    });
+}
+
+// Call the function to add default posts when the page loads
+window.addEventListener("load", addDefaultPosts);
+
+// Function to open overlay with full-size image or video
+function openOverlay(fileURL, fileType) {
+    const modal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+
+    if (fileType === 'image') {
+        const image = document.createElement('img');
+        image.src = fileURL;
+        image.classList.add('overlay-image');
+        modalVideo.parentNode.replaceChild(image, modalVideo);
+    } else {
+        modalVideo.src = fileURL;
+    }
+
+    // Show modal
+    const bootstrapModal = new bootstrap.Modal(modal);
+    bootstrapModal.show();
+}
+
+
+</script>
+
+
 
 <!-- news and jobs -->
 <script>
@@ -2016,8 +2229,244 @@ function createJobCard(job) {
     jobCard.appendChild(periodElement);
 
     return jobCard;
-}</script>
+}</script>  
 
+<!-- timeline update an modal -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    // Append the post form to the top of the timeline
+    const postForm = document.getElementById('postForm');
+    const timeline = document.querySelector('.feed-container');
+    timeline.insertBefore(postForm, timeline.firstChild);
+
+    // Add event listener for comment buttons
+    addCommentEventListeners();
+
+    // Add event listener for form submission (posting new content)
+    postForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Get the post content from the textarea
+        const postContent = document.getElementById('postContent').value.trim();
+        // Get the files selected by the user
+        const files = Array.from(document.getElementById('fileInput').files);
+
+        if (postContent === '' && files.length === 0) {
+            // If both post content and files are empty, return without posting
+            return;
+        }
+
+        // Simulate posting the content to the server
+        // Here, you can implement the logic to send the post content and files to the server
+        // For demonstration, let's just display the posted content and files in the feed
+        const user = 'John Doe'; // Assuming the current user is John Doe
+        addFeedItem(user, postContent, files);
+
+        // Clear the textarea and file input after posting
+        document.getElementById('postContent').value = '';
+        document.getElementById('fileInput').value = '';
+    });
+
+    // Add event listener for overlay close button
+    const overlay = document.getElementById('overlay');
+    overlay.addEventListener('click', function (event) {
+        if (event.target === overlay) {
+            overlay.style.display = 'none';
+            const overlayContent = document.getElementById('overlayContent');
+            overlayContent.innerHTML = ''; // Clear overlay content
+        }
+    });
+});
+
+// Function to handle like button click
+function handleLikeClick(postElement) {
+    const likeButton = postElement.querySelector('.like-btn');
+    const likeCount = postElement.querySelector('.like-count');
+
+    // Check if the post is already liked by the user
+    const isLiked = likeButton.classList.contains('liked');
+
+    // Toggle like status and update like count
+    if (isLiked) {
+        likeButton.classList.remove('liked');
+        let currentLikes = parseInt(likeCount.textContent);
+        currentLikes--;
+        likeCount.textContent = currentLikes;
+    } else {
+        likeButton.classList.add('liked');
+        let currentLikes = parseInt(likeCount.textContent);
+        currentLikes++;
+        likeCount.textContent = currentLikes;
+    }
+}
+
+// Function to handle comment button click
+function handleCommentClick(postElement) {
+    const commentInput = postElement.querySelector('.comment-input');
+    const commentContent = commentInput.value.trim();
+    const commentList = postElement.querySelector('.post-comments');
+    const commentCount = postElement.querySelector('.comment-count');
+
+    if (commentContent !== '') {
+        const newComment = document.createElement('div');
+        newComment.textContent = commentContent;
+
+        // Create a delete button for the comment
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.classList.add('delete-comment-btn');
+        deleteButton.addEventListener('click', function () {
+            // Remove the comment from the DOM
+            commentList.removeChild(newComment);
+            // Decrement the comment count
+            let currentComments = parseInt(commentCount.textContent);
+            currentComments--;
+            commentCount.textContent = currentComments;
+        });
+
+        // Append the delete button to the comment
+        newComment.appendChild(deleteButton);
+
+        // Append the comment to the comment list
+        commentList.appendChild(newComment);
+        commentInput.value = '';
+
+        // Increment the comment count
+        let currentComments = parseInt(commentCount.textContent);
+        currentComments++;
+        commentCount.textContent = currentComments;
+    }
+}
+
+// Function to handle deleting a comment button click
+function handleDeleteCommentButtonClick(commentElement, commentCount) {
+    return function () {
+        commentElement.parentNode.removeChild(commentElement);
+        // Decrement the comment count
+        let currentComments = parseInt(commentCount.textContent);
+        currentComments--;
+        commentCount.textContent = currentComments;
+    };
+}
+
+// Function to add event listeners for comment buttons
+function addCommentEventListeners() {
+    const commentButtons = document.querySelectorAll('.comment-btn');
+    commentButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            const postElement = this.parentNode;
+            handleCommentClick(postElement);
+        });
+    });
+}
+
+// Function to add a new feed item (post) to the feeds section
+function addFeedItem(user, content, files) {
+    // Create a new feed item element
+    const newFeedItem = document.createElement('div');
+    newFeedItem.classList.add('feed-item');
+
+    const newUser = document.createElement('p');
+    newUser.classList.add('feed-user');
+    newUser.textContent = user;
+
+    const newContent = document.createElement('p');
+    newContent.classList.add('feed-content');
+    newContent.textContent = content;
+
+    const likes = document.createElement('button');
+    likes.textContent = 'Like';
+    likes.classList.add('like-btn');
+    likes.addEventListener('click', () => handleLikeClick(newFeedItem));
+
+    const likeCount = document.createElement('span');
+    likeCount.textContent = '0';
+    likeCount.classList.add('like-count');
+
+    const comments = document.createElement('button');
+    comments.textContent = 'Comment';
+    comments.classList.add('comment-btn');
+    comments.addEventListener('click', () => handleCommentClick(newFeedItem));
+
+    const commentInput = document.createElement('input');
+    commentInput.setAttribute('type', 'text');
+    commentInput.classList.add('comment-input');
+    commentInput.setAttribute('placeholder', 'Add a comment...');
+
+    const commentCount = document.createElement('span');
+    commentCount.textContent = '0';
+    commentCount.classList.add('comment-count');
+
+    const commentList = document.createElement('div');
+    commentList.classList.add('post-comments');
+
+    // Append elements to the new feed item
+    newFeedItem.appendChild(newUser);
+    newFeedItem.appendChild(newContent);
+    newFeedItem.appendChild(likes);
+    newFeedItem.appendChild(likeCount);
+    newFeedItem.appendChild(commentInput);
+    newFeedItem.appendChild(comments);
+    newFeedItem.appendChild(commentCount);
+    newFeedItem.appendChild(commentList);
+
+    // Display uploaded files
+    if (files.length > 0) {
+        const fileContainer = document.createElement('div');
+        fileContainer.classList.add('post-files');
+
+        files.forEach(file => {
+            const fileType = file.type.startsWith('image') ? 'image' : 'video';
+            const fileURL = URL.createObjectURL(file);
+
+            if (fileType === 'image') {
+                const image = document.createElement('img');
+                image.src = fileURL;
+                image.classList.add('post-image');
+                image.addEventListener('click', function () {
+                    openOverlay(fileURL, 'image');
+                });
+                fileContainer.appendChild(image);
+            } else {
+                const video = document.createElement('video');
+                video.src = fileURL;
+                video.controls = true;
+                video.classList.add('post-video');
+                video.addEventListener('click', function () {
+                    openOverlay(fileURL, 'video');
+                });
+                fileContainer.appendChild(video);
+            }
+        });
+
+        newFeedItem.insertBefore(fileContainer, newContent.nextSibling);
+    }
+
+    // Insert the new feed item into the feeds section
+    const feeds = document.getElementById('feeds');
+    feeds.insertBefore(newFeedItem, feeds.firstChild);
+}
+
+// Function to open overlay with full-size image or video
+function openOverlay(fileURL, fileType) {
+    const modal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+
+    if (fileType === 'image') {
+        const image = document.createElement('img');
+        image.src = fileURL;
+        image.classList.add('overlay-image');
+        modalVideo.parentNode.replaceChild(image, modalVideo);
+    } else {
+        modalVideo.src = fileURL;
+    }
+
+    // Show modal
+    const bootstrapModal = new bootstrap.Modal(modal);
+    bootstrapModal.show();
+}
+
+</script>
 
 </body>
 
