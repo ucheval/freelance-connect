@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Freelancer Connect</title>
+    <title><a href="./freelancedashboard.html">Dashboard | Freelancer Connect</a></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
          
         /* Custom CSS styles */
@@ -32,8 +31,16 @@
     position: relative;
 }
 
+
+
+
+
+
+
+
+
 .search-input {
-    padding: 8px 30px; /* Adjust as needed */
+    padding: 0px; /* Adjust as needed */
     border: none;
     border-radius: 20px; /* Adjust to match your design */
     background-color: #ffffff; /* Match your design */
@@ -43,8 +50,20 @@
 }
 
 
+    .nav-flex{
+        display: flex;
+        flex-direction: row;
+        /* background-color: red; */
+    }
+    .navbar-nav{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    max-width: 100%;
+    }
 .search-input:focus {
-    width: 500px; /* Adjust expanded width as needed */
+    width: 250px; /* Adjust expanded width as needed */
     outline: none;
 }
 
@@ -55,6 +74,7 @@
     transform: translateY(-50%);
     color: #555; /* Match your design */
     cursor: pointer;
+    
 }
 
    
@@ -66,14 +86,6 @@
         }
 
 
-
-/* .col-lg-3 {
-    background-color: #fdfafad3;
-     padding: 10px; 
-    border-radius: 10px;
-    box-shadow: 0 0 10px #0000001a;
-
-} */
 .sidebar {
     background-color: #fff;
     padding: 20px;
@@ -377,6 +389,99 @@
 .footer-bottom p:hover {
     color: #4267B2; /* Facebook blue */
 }
+/* here */
+.carousel {
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .my-carousel{
+            padding: 10px;
+            border-radius: 20px;
+            background-color: #f0f0f0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            margin-bottom: auto;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+     /* profileare profile card */  
+     
+     .round-inner{
+        background-color: #fdfafad3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0000001a;
+     }
+       
+    .profilearea-profile-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+        width:100%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+    }
+
+  
+
+    .profilearea-profile-image {
+        width: 100%;
+        /* height: 256px; */
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .profilearea-profile-name {
+        font-weight: bold;
+        font-size: medium;
+        color: #4267B2; /* Facebook blue */
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        font-family:'Courier New', Courier, monospace;
+    }
+
+    .profilearea-category {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 13px;
+        letter-spacing: 2px;
+        font-weight: bolder;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        
+
+    }
+
+    .profilearea-item-text {
+        color: #333;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        font-size: smaller;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .profilearea-btn-primary {
+        background-color: #4267B2; /* Facebook blue */
+        border-color: #4267B2; /* Facebook blue */
+        width: 100%;
+        font-size: 12px;
+        font-weight: bolder;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;        
+    }
+
+
+
 
 
 .profile-card {
@@ -491,9 +596,12 @@
     /* view portfolio btn only */
     .randomusers-container .viewportfolio{
         /* background-color: rgb(122, 93, 93); */
-        position: relative;
-        left: 55px;
-        padding: 5px;
+        /* position: relative; */
+        /* left: 55px; */
+        padding: 8px;
+        font-size: 15px;
+        width: 90%;
+        margin: auto;
 
         
     }
@@ -886,42 +994,6 @@
     /* text-shadow: #333 0 0  1px; */
 }
 
-/* Responsive Styling */
-@media screen and (max-width: 768px) {
-    .feed-container {
-        padding: 15px;
-    }
-
-    #postContent {
-        width: calc(100% - 80px);
-    }
-
-    .comment-input {
-        width: calc(100% - 100px);
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .feed-user {
-        font-size: 14px;
-    }
-
-    .feed-content {
-        font-size: 16px;
-    }
-
-    .like-btn, .comment-btn {
-        font-size: 12px;
-    }
-
-    .delete-comment-btn {
-        font-size: 10px;
-    }
-
-    .comment-input {
-        font-size: 12px;
-    }
-}
 
 
 /* posted files */
@@ -1034,53 +1106,850 @@
         display: none;
     }
 
-    /* css modal */
-    /* Modal CSS */
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
 
+
+.nav-item> a{
+    /* background-color: red; */
+    color: rgb(76, 76, 76);
+}
+.buttons-container button,
+.buttons-container span {
+    margin-right: 10px;
+}
+/* Responsive Media Queries */
+@media (min-width:769px)and (max-width: 992px) {
+    .container {
+            max-width: 100%;
+            margin: 0px auto;
+            padding-top: 0px;
+        }
+  
+    .navbar-nav{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    max-width: 100%;
+    }
+
+    .nav-flex{
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+    }
+
+  
+    .navbar-nav{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    max-width: 100%;
+    font-size: 13px;
     
-/* .modal-dialog {
-    max-width: 20%;
-    height: auto;
-    
-} */
+    }
 
-/* .modal-content {
-    width: 100%;
+    .navbar-nav a:hover{
+        color: #0080ff;
+    }
+/* .container{
+    background-color: red;
 } */
+.search-input:focus {
+    width: 100px; /* Adjust expanded width as needed */
+    outline: none;
+}
 
-/* .modal-body {
-    text-align: center;
-} */
+.navbar-brand{
+    font-size: 16px;
 
-/* Adjust modal title */
-/* .modal-title {
-    text-align: center;
-} */
+}
 
-/* Center the close button */
-/* .btn-close {
+.search-icon {
     position: absolute;
-    right: 10px;
-    top: 10px;
-} */
+    top: 50%;
+    right: 10px; /* Adjust as needed */
+    transform: translateY(-50%);
+    color: #555; /* Match your design */
+    cursor: pointer;
+}
 
-/* Style for modal image */
-/*#modalImage {
-    max-width: 100%;
-    height: 100%;
-    margin: auto;
-    display: block;
+.header{
+   width: 20%;
+
+}
+  
+
+.sidebar {
+    width: 250px;
+    position: absolute;
+    left: -0;
+    transform: translateX(-100%);
+    height: fit-content;
+}
+
+.sidebar.collapsed {
+    transform: translateX(0);
+    overflow: visible;
+    z-index: 500;
+
+
+}
+.col-lg-6{
+    width: 600px;
+    margin-left: 0;
+    position: absolute;
+    left: 30px;
+
+}
+.round-inner{
+    width: 315px;
+    position: relative;
+    left: 67%;
+    /* padding: 0; */
+}
+
+.profilearea-profile-image{
+    width: 90%;
+}
+
+/* here */
+.carousel {
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .my-carousel{
+            padding: 10px;
+            border-radius: 20px;
+            background-color: #f0f0f0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            margin-bottom: auto;
+        }
+
+        .carousel-inner img {
+            width: 95%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+     /* profileare profile card */  
+     
+     .round-inner{
+    padding: 20px;
+    height: fit-content;
+     }
+
+    .profilearea-profile-card {
+       
+        padding: 10px;
+        margin-bottom: 0px;
+        width:100%;
+        margin-left: auto;
+        margin-right: auto;
+        /* height: 100%; */
+    }
+       
+    .profilearea-profile-card {
+       
+        padding: 20px;
+        margin-bottom: 0px;
+        width:100%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+    }
+
+  
+
+    .profilearea-profile-image {
+        width: 100%;
+        /* height: 256px; */
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .profilearea-profile-name {
+        font-weight: bold;
+        font-size: medium;
+        color: #4267B2; /* Facebook blue */
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        font-family:'Courier New', Courier, monospace;
+    }
+
+    .profilearea-category {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 13px;
+        letter-spacing: 2px;
+        font-weight: bolder;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        
+
+    }
+
+    .profilearea-item-text {
+        color: #333;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        font-size: smaller;
+        font-family: ;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .profilearea-btn-primary {
+        background-color: #4267B2; /* Facebook blue */
+        border-color: #4267B2; /* Facebook blue */
+        width: 100%;
+        font-size: 12px;
+        font-weight: bolder;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;        
+    }
+
+
+.profile-card {
+    background-color: #fff;
+     border-radius: 10px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     padding: 20px;
+     margin-bottom: 20px;
+    }
+
+        .profile-image {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .profile-name {
+            font-weight: bold;
+            color: #4267B2; /* Facebook blue */
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+
+        .profile-info {
+            color: #333;
+            margin-bottom: 20px;
+            font-size:10px;
+        }
+
+        
+.search-container {
+    position: relative;
+}
+
+.search-input {
+    padding: 8px 30px; /* Adjust as needed */
+    border: none;
+    border-radius: 20px; /* Adjust to match your design */
+    background-color: #ffffff; /* Match your design */
+    font-size: 14px;
+    width: 200px; /* Adjust width as needed */
+    transition: width 0.4s ease-in-out;
+}
+
+.search-input:focus {
+    width: 500px; /* Adjust expanded width as needed */
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust as needed */
+    transform: translateY(-50%);
+    color: #555; /* Match your design */
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding-top: 10px;
+}
+
+.sidebar{
+    height: fit-content;
+}
+
+.sidebar,
+.sidebar-inner {
+    background-color: #fff;
+    padding: 20px;
     border-radius: 10px;
-}*/
+    box-shadow: 0 0 10px #0000001a;
+    
+}
 
-/* Style for modal video */
-/*#modalVideo {
-    max-width: 100%;
+.sidebar-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.sidebar-item i {
+    margin-right: 20px;
+    font-size: 15px;
+    width: 20px;
+    text-align: center;
+    color: #4267B2;
+}
+
+.sidebar-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar-link:hover {
+    color: #4267B2; /* Facebook blue */
+    transform: translateX(5px);
+}
+
+        
+        .randomusers-container {    
+        max-width: 1370px;
+        margin: 10px auto;
+        height: 85vh;
+        overflow-y: scroll
+    }
+
+    .randomusers-container h2 {  
+        width: 100%;
+        margin: auto;  
+    padding: 10px 0px;
+    border-radius: 5px;
+}
+
+    .randomusers-container .profile-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+        width:240px;
+        margin-left: auto;
+        margin-right: auto;
+        /* height: 360px; */
+    }
+
+  
+
+    .randomusers-container .profile-image {
+        width: 100%;
+        height: 13vh;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .randomusers-container .profile-name {
+        font-weight: bold;
+        font-size: medium;
+        color: #4267B2; /* Facebook blue */
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        font-family:'Courier New', Courier, monospace;
+    }
+
+    .randomusers-container .category {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 13px;
+        letter-spacing: 2px;
+        font-weight: bolder;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        
+
+        /* background-color: rgb(225, 225, 230); */
+    }
+
+    .randomusers-container .item-text {
+        color: #333;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        font-size: smaller;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .randomusers-container .btn-primary {
+        background-color: #4267B2; /* Facebook blue */
+        border-color: #4267B2; /* Facebook blue */
+        /* margin: 0px 20px; */
+        padding: 5px;
+        font-size: 12px;
+        position: static;
+        
+    }
+
+    /* view portfolio btn only */
+    .randomusers-container .viewportfolio{
+        /* background-color: rgb(122, 93, 93); */
+        position: relative;
+        left: 55px;
+        padding: 5px;
+
+        
+    }
+
+    .randomusers-container .btn-primary:hover {
+        background-color: #2e4a92; /* Darker shade of Facebook blue */
+        border-color: #2e4a92; /* Darker shade of Facebook blue */
+    }
+
+    .job-container{
+        width: 30%;
+        
+    }
+    /* Feed Container */
+   /* Custom CSS styles */
+
+
+   .timeline{
+    /* background-color: brown; */
+    width: 70%;
+   }
+.timelineandjob{
+    /* background-color: red; */
+   left: 0px;
+}
+
+/* Feed Container */
+.feed-container {
+
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 82vh;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+}
+
+.feed-container h2 {
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #08539e;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    text-align: center;
+
+}
+
+/* Placeholder */
+#postContent::placeholder {
+    /* Center align placeholder text both horizontally and vertically */
+    vertical-align: middle;
+    line-height: inherit; /* Inherit line height */
+}
+
+#postContent {
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    margin-bottom: 10px;
+    outline: none; /* Remove focus outline */
+    overflow-y: visible;
+}
+
+#postContent:focus {
+    border-color: #4267B2; /* Facebook blue */
+}
+
+
+
+
+#postForm button {
+    background-color: #4267B2; /* Facebook blue */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#postForm button:hover {
+    background-color: #2e4a92; /* Darker shade of Facebook blue */
+}
+.available-jobs{
+   background-color: gray; 
+}
+
+/* Feed Item */
+.feed-item {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.feed-user {
+    font-weight: bold;
+    color: #4267B2; /* Facebook blue */
+    margin-bottom: 5px;
+}
+
+.feed-content {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Like Button */
+.like-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight:100;
+    color: #555;
+}
+
+.like-btn.liked {
+    color: #4267B2; /* Facebook blue */
+}
+
+/* Comment Button */
+.comment-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+    font-size: 14px;
+    
+}
+
+/* Comment Input */
+.comment-input {
+    width: calc(100% - 90px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+/* Comment List */
+.post-comments {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Delete Comment Button */
+.delete-comment-btn {
+    background-color: #f44336; /* Red */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+.delete-comment-btn:hover {
+    background-color: #d32f2f; /* Darker shade of Red */
+}
+
+#postContent:focus {
+    border-color: #4267B2; /* Facebook blue */
+}
+
+#postForm button {
+    background-color: #4267B2; /* Facebook blue */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#postForm button:hover {
+    background-color: #2e4a92; /* Darker shade of Facebook blue */
+}
+
+/* Like Count */
+.like-count {
+    color: #555;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+/* Comment Count */
+.comment-count {
+    color: #555;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+/* posted File Container (video and images)*/
+
+
+
+.post-files img:hover,
+.post-files video:hover {
+    transform: scale(1.1);
+}
+
+/* Overlay for full-size image or video */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 999;
+}
+
+.overlay-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.overlay-image,
+.overlay-video {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* chech */
+
+
+.post-files {
+    max-width: 30%;
+    /* background-color: red; */
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-start; /* Align items to the top */
+    /* overflow-y: hidden; Hide overflow */
+}
+
+
+/* Image */
+.post-image {
+    max-width: 40%;
     height: auto;
-    margin: auto;
-    display: block;
-} */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
 
+/* Video */
+.post-video {
+    max-width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Comment Button */
+.comment-btn {
+    background-color: #4267B2; /* Facebook blue */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.comment-btn:hover {
+    background-color: #2e4a92; /* Darker shade of Facebook blue */
+}
+
+.feeds {
+    padding: 20px;
+    max-height: 100%; /* without this height this container post will never scrol*/
+    overflow-y: scroll; /* Allow vertical scrolling */
+    margin-bottom: 100px;
+}
+
+.feeds::-webkit-scrollbar{
+    display: none;
+}
+
+.feeds-container-area{
+    background-color:  #fff;
+    height: 50vh;
+    overflow-y: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+}
+
+/* feeds ends here */
+
+.available-jobs{
+    background-color:  #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /* height: 100%; */
+}
+
+.available-jobs h2{
+    font-size: 15px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #08539e;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    text-align: center;
+    /* text-shadow: #333 0 0  1px; */
+}
+
+
+
+/* available jobs /news section */
+.job-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.job-card img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover; /*Ensure the image maintains its aspect ratio and covers the entire space*/
+}
+
+    .job-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.job-card:hover {
+    background-color: #e9e9e9;
+    transform: translateY(-3px);
+}
+
+.job-card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.job-card p {
+    margin: 0;
+    color: #666;
+}
+
+/* Optional: Add styles for the job title */
+.job-card h3 {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* Optional: Add styles for the job location and period */
+.job-card p {
+    font-size: 14px;
+}
+
+ /* Hide scrollbar for Chrome, Safari, and Opera */
+ .randomusers-container::-webkit-scrollbar,
+    .container::-webkit-scrollbar {
+        display: none;
+    }
+
+     /* Styles for randomusers-container and container */
+     .randomusers-container-border {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50vh; /* Adjust as needed */
+        border: 1px solid #ccc; /* Border color */
+        background-color: #f5f5f5; /* Background color */
+        z-index: 1; /* Ensure the border is above the content */
+    }
+
+    .container-border {
+        position: fixed;
+        top: 50vh; /* Aligns with the bottom of randomusers-container */
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-top: 1px solid #ccc; /* Border color */
+        background-color: #f5f5f5; /* Background color */
+        z-index: 1; /* Ensure the border is above the content */
+    }
+
+    /* Shadow effect */
+    .container-shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        z-index: 0; /* Behind the content */
+    }
+
+    /* Hide scrollbar for Chrome, Safari, and Opera */
+    .randomusers-container, .container {
+        overflow-y: scroll;
+    }
+
+    .randomusers-container::-webkit-scrollbar, .container::-webkit-scrollbar {
+        display: none;
+    }
 
 .buttons-container {
     display: flex;
@@ -1090,12 +1959,2698 @@
 }
 
 
-
+.nav-item> a{
+    /* background-color: red; */
+    color: rgb(76, 76, 76);
+}
 .buttons-container button,
 .buttons-container span {
     margin-right: 10px;
 }
+
+}
+
+/* Responsive Styling */
+@media (min-width:577px) and (max-width: 768px) {
+
+    .container {
+            max-width: 100%;
+            padding: 0px;
+            /* background-color: red; */
+
+        }
+
+       
+        
+    .navbar-nav{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    max-width: 100%;
+    /* background-color: blue; */
+    padding: 0px;
     
+    }
+
+    
+
+    .nav-flex{
+        display: flex;
+        flex-direction: row;
+        /* background-color: red; */
+    }
+
+  
+    .navbar-nav{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    max-width: 100%;
+    font-size: 13px;
+    
+    }
+
+    .navbar-nav a:hover{
+        color: #0080ff;
+    }
+
+    .search-container{
+        margin: 0;
+        font-size: 11px;
+    }
+.search-input {
+    padding: 0px 5px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ffffff; 
+    font-size: 8px;
+    width: 120px; 
+    transition: none;
+}
+
+.search-input:focus {
+    width: 120px; 
+    outline: none;
+} 
+
+.navbar-brand{
+    font-size: 11px;
+    line-height: 27px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust as needed */
+    transform: translateY(-50%);
+    color: #555; /* Match your design */
+    cursor: pointer;
+}
+  
+
+.sidebar {
+    width: 230px;
+    position: absolute;
+    left: -0;
+    transform: translateX(-100%);
+    height: fit-content;
+}
+
+/* .sidebar.collapsed {
+    transform: translateX(0);
+    overflow: visible;
+    z-index: 500;
+
+
+} */
+
+.col-lg-6{
+    width: 400px;
+    margin-left: 0;
+    position: absolute;
+    left: 15px;
+}
+.round-inner{
+    width: 250px;
+    position: relative;
+    left: 65%;
+    font-size: 14px;
+    /* padding: 0; */
+}
+
+.profilearea-profile-image{
+    width: 80%;
+    border-radius: 80px;
+}
+
+/* here */
+.carousel {
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .my-carousel{
+            
+            padding: 10px;
+            border-radius: 20px;
+            background-color: #f0f0f0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            margin-bottom: auto;
+        }
+
+        .carousel-inner img {
+            width: 40%;
+             height: 200px;
+            object-fit: cover;
+        }
+
+     /* profileare profile card */  
+     
+     .round-inner{
+    padding: 10px;
+    height: fit-content;
+     }
+       
+    .profilearea-profile-card {
+       
+        padding: 10px;
+        margin-bottom: 0px;
+        width:100%;
+        margin-left: auto;
+        margin-right: auto;
+        /* height: 100%; */
+    }
+
+  
+
+    .profilearea-profile-image {
+        width: 50%;
+        background-color: #4267B2;
+        padding: 10px;
+        border-radius: 100px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .profilearea-profile-name {
+        font-weight: bold;
+        font-size: 13px;
+        color: #4267B2; /* Facebook blue */
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        font-family:'Courier New', Courier, monospace;
+    }
+
+    .profilearea-category {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 10px;
+        letter-spacing: 2px;
+        font-weight: bolder;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        
+
+    }
+
+    .profilearea-item-text {
+        color: #333;
+        font-size: 10px;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .profilearea-btn-primary {
+        background-color: #4267B2; /* Facebook blue */
+        border-color: #4267B2; /* Facebook blue */
+        width: 100%;
+        font-size: 10px;
+        font-weight: bolder;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;        
+    }
+
+
+.profile-card {
+    background-color: #fff;
+     border-radius: 10px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     padding: 20px;
+     margin-bottom: 20px;
+    }
+
+        .profile-image {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .profile-name {
+            font-weight: bold;
+            color: #4267B2; /* Facebook blue */
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+
+        .profile-info {
+            color: #333;
+            margin-bottom: 20px;
+            font-size:10px;
+        }
+
+        
+.search-container {
+    position: relative;
+}
+
+.search-input {
+    padding: 8px 30px; /* Adjust as needed */
+    border: none;
+    border-radius: 20px; /* Adjust to match your design */
+    background-color: #ffffff; /* Match your design */
+    font-size: 14px;
+    width: 200px; /* Adjust width as needed */
+    transition: width 0.4s ease-in-out;
+}
+
+.search-input:focus {
+    width: 500px; /* Adjust expanded width as needed */
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust as needed */
+    transform: translateY(-50%);
+    color: #555; /* Match your design */
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding-top: 10px;
+}
+
+.sidebar{
+    height: fit-content;
+}
+
+.sidebar,
+.sidebar-inner {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0000001a;
+    
+}
+
+.sidebar-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.sidebar-item i {
+    margin-right: 20px;
+    font-size: 15px;
+    width: 20px;
+    text-align: center;
+    color: #4267B2;
+}
+
+.sidebar-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar-link:hover {
+    color: #4267B2; /* Facebook blue */
+    transform: translateX(5px);
+}
+
+        
+        .randomusers-container {    
+        max-width: 1370px;
+        margin: 10px auto;
+        height: 85vh;
+        overflow-y:unset;
+    }
+
+    .randomusers-container h2 {  
+        width: 100%;
+        margin: auto;  
+    padding: 5px 0px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+    .randomusers-container .profile-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 5px;
+        margin-bottom: 10px;
+        width:150px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 10px;
+        /* height: 360px; */
+    }
+
+  
+
+    .randomusers-container .profile-image {
+        width: 80%;
+        height: fit-content;
+        border-radius: 100px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .randomusers-container .profile-name {
+        font-weight: bold;
+    
+        font-size: 12px;
+        color: #4267B2; /* Facebook blue */
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        font-family:'Courier New', Courier, monospace;
+    }
+
+    .randomusers-container .category {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 10px;
+        letter-spacing: 2px;
+        font-weight: bolder;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        
+
+        /* background-color: rgb(225, 225, 230); */
+    }
+
+    .randomusers-container .item-text {
+        color: #333;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        font-size: smaller;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .randomusers-container .btn-primary {
+        background-color: #4267B2; /* Facebook blue */
+        border-color: #4267B2; /* Facebook blue */
+        /* margin: 0px 20px; */
+        padding: 5px;
+        font-size: 12px;
+        
+    }
+
+    /* view portfolio btn only */
+    .randomusers-container .viewportfolio{
+        /* background-color: rgb(122, 93, 93); */
+        position: relative;
+        left: 55px;
+        padding: 5px;
+
+        
+    }
+
+    .randomusers-container .btn-primary:hover {
+        background-color: #2e4a92; /* Darker shade of Facebook blue */
+        border-color: #2e4a92; /* Darker shade of Facebook blue */
+    }
+
+   
+.job-container{
+        width: 100%;
+        margin-bottom: 20px;
+        overflow-y: visible;
+        
+        
+    }
+.available-jobs{
+    background-color:  #fff;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /* height: 100%; */
+}
+
+/* company */
+.job-card>span{
+    font-size: 12px;
+    padding: 5px 0px;
+}
+
+.available-jobs h2{
+    font-size: 15px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #08539e;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    text-align: center;
+    /* text-shadow: #333 0 0  1px; */
+}
+
+
+.job-card img {
+    display: flex;
+    width: 25px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover; /*Ensure the image maintains its aspect ratio and covers the entire space*/
+}
+
+    .job-card {
+        width: 90%;
+        display: flex;
+        margin: 2px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    flex-direction: column;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.other-feeds{
+    display: flex;
+    width: 100%;
+    /* flex-direction: column; */
+}
+
+.job-card:hover {
+    background-color: gold;
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 10px blue;
+}
+
+
+.job-card p {
+    margin: 0;
+    color: #666;
+    font-size: 8px;
+}
+
+/* Optional: Add styles for the job title */
+.job-card h3 {
+    color: #333;
+    font-size: 9px;
+    font-weight: bold;
+   
+}
+
+
+/* Feed Container */
+.feed-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 82vh;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+}
+
+.feed-container h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #08539e;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    text-align: center;
+
+}
+
+/* Placeholder */
+#postContent::placeholder {
+    /* Center align placeholder text both horizontally and vertically */
+    font-size: 12px;
+    vertical-align: middle;
+    margin: auto;
+    padding-top: 10px; /* Inherit line height */
+}
+
+
+
+#postContent {
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    margin-bottom: 10px;
+    outline: none; /* Remove focus outline */
+    overflow-y: visible;
+}
+
+#postContent:focus {
+    border-color: #4267B2; /* Facebook blue */
+}
+
+
+
+
+#postForm button {
+    background-color: #4267B2; /* Facebook blue */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#postForm button:hover {
+    background-color: #2e4a92; /* Darker shade of Facebook blue */
+}
+
+/* Feed Item */
+.feed-item {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.feed-user {
+    font-weight: bold;
+    color: #4267B2; /* Facebook blue */
+    margin-bottom: 5px;
+}
+
+.feed-content {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Like Button */
+.like-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+}
+
+.like-btn.liked {
+    color: #4267B2; /* Facebook blue */
+}
+
+/* Comment Button */
+.comment-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+    
+}
+
+/* Comment Input */
+.comment-input {
+    width: calc(100% - 90px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* Comment List */
+.post-comments {
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+/* Delete Comment Button */
+.delete-comment-btn {
+    background-color: #f44336; /* Red */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+.delete-comment-btn:hover {
+    background-color: #d32f2f; /* Darker shade of Red */
+}
+
+#postContent:focus {
+    border-color: #4267B2; /* Facebook blue */
+}
+
+#postForm button {
+    background-color: #4267B2; /* Facebook blue */
+    color: #fff;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#postForm button:hover {
+    background-color: #2e4a92; /* Darker shade of Facebook blue */
+}
+
+/* Like Count */
+.like-count {
+    color: #555;
+    margin-right: 10px;
+}
+
+/* Comment Count */
+.comment-count {
+    color: #555;
+    margin-left: 10px;
+}
+
+/* posted File Container (video and images)*/
+
+
+.post-files img:hover,
+.post-files video:hover {
+    transform: scale(1.1);
+}
+
+/* Overlay for full-size image or video */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 999;
+}
+
+.overlay-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.overlay-image,
+.overlay-video {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* chech */
+
+
+.post-files {
+    max-width: 30%;
+    /* background-color: red; */
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-start; /* Align items to the top */
+    /* overflow-y: hidden; Hide overflow */
+}
+
+
+/* Image */
+.post-image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Video */
+.post-video {
+    max-width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Comment Button */
+.comment-btn {
+    background-color: #4267B2; /* Facebook blue */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    transition: background-color 0.3s;
+}
+
+.comment-btn:hover {
+    background-color: #2e4a92; /* Darker shade of Facebook blue */
+}
+
+.feeds {
+    padding: 20px;
+    max-height: 100%; /* without this height this container post will never scrol*/
+    overflow-y: scroll; /* Allow vertical scrolling */
+    margin-bottom: 100px;
+}
+
+.feeds::-webkit-scrollbar{
+    display: none;
+}
+
+.feeds-container-area{
+    background-color:  #fff;
+    height: 50vh;
+    overflow-y: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 10px;
+
+}
+
+/* feeds ends here */
+
+
+
+/* Optional: Add styles for the job location and period */
+
+
+ /* Hide scrollbar for Chrome, Safari, and Opera */
+ .randomusers-container::-webkit-scrollbar,
+    .container::-webkit-scrollbar {
+        display: none;
+    }
+
+     /* Styles for randomusers-container and container */
+     .randomusers-container-border {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50vh; /* Adjust as needed */
+        border: 1px solid #ccc; /* Border color */
+        background-color: #f5f5f5; /* Background color */
+        z-index: 1; /* Ensure the border is above the content */
+    }
+
+    .container-border {
+        position: fixed;
+        top: 50vh; /* Aligns with the bottom of randomusers-container */
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-top: 1px solid #ccc; /* Border color */
+        background-color: #f5f5f5; /* Background color */
+        z-index: 1; /* Ensure the border is above the content */
+    }
+
+    /* Shadow effect */
+    .container-shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        z-index: 0; /* Behind the content */
+    }
+
+    /* Hide scrollbar for Chrome, Safari, and Opera */
+    .randomusers-container, .container {
+        overflow-y:hidden;
+        overflow: scroll;
+    }
+
+    .randomusers-container::-webkit-scrollbar, .container::-webkit-scrollbar {
+        display: none;
+    }
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.nav-item> a{
+    /* background-color: red; */
+    color: rgb(76, 76, 76);
+}
+.buttons-container button,
+.buttons-container span {
+    margin-right: 10px;
+}
+.footer{
+    width: 100%;
+    font-size: 8px;
+}
+
+.social-meia-links{
+    font-size: 8px;
+}
+
+.footer-section>h3{
+    font-size: 12px;
+}
+
+.footer-section:hover{
+    color: white;
+    
+}
+
+}
+
+
+/* phone screen */
+/* Responsive Styling */
+@media (min-width:321px) and (max-width: 576px){
+
+    .container {
+            max-width: 100%;
+            margin: auto;
+            padding-top: 0px;
+        }
+    .navbar-nav{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    max-width: 100%;
+    }
+
+    .nav-flex{
+        display: flex;
+        flex-direction: row;
+        /* background-color: red; */
+    }
+
+  
+    .navbar-nav{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    max-width: 0%;
+    font-size: 8px;
+    
+    }
+
+    .navbar-nav a:hover{
+        color: #0080ff;
+    }
+
+.search-input {
+    padding: 5px 10px; /* Adjust as needed */
+    border: none;
+    border-radius: 20px; /* Adjust to match your design */
+    background-color: #6b1818; /* Match your design */
+    font-size: 8px;
+    width: 50px; /* Adjust width as needed */
+    transition: width 0.4s ease-in-out;
+}
+
+.search-input:focus {
+    width: 70px; /* Adjust expanded width as needed */
+    outline: none;
+}
+
+.navbar-brand{
+    font-size: 8x;
+    padding: 0;
+    margin: auto;
+
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #555;
+    cursor: pointer;
+}
+.nav-item> a{
+color: rgb(76, 76, 76);
+}
+
+header {
+    background-color: #2e4a92;      
+    color: #fff;       
+    padding: 5px 0;       
+    text-align: center;      
+    margin-bottom: 8px;
+ }
+
+.navbar{
+    padding: 2px;
+    color: dark;
+}
+
+.nav-item a{
+    color: black;
+
+}
+
+.nav-link{
+    z-index: 0;
+}
+
+
+
+.sidebar {
+width: 200px;
+position: absolute;
+left: -0;
+transform: translateX(-100%);
+height: fit-content;
+
+}
+
+.sidebar.collapsed {
+transform: translateX(0);
+overflow: visible;
+z-index: 500;
+padding: 5px;
+
+}
+
+.sidebar-list{
+    /* background-color: red; */
+    padding: 0px;
+    margin: 0px;
+    font-size: 2px;
+}
+
+.sidebar-title{
+    font-size: 2px;
+}
+
+.sidebar-item>a{
+    font-size: 8px;
+}
+
+.sidebar h3{
+    font-size: 8px;
+}
+
+.sidebar-item i{
+    font-size: 2px;
+}
+.col-lg-6{
+    width: 330px;
+position: absolute;
+left: 1px;
+
+}
+
+
+/* here */
+.carousel {
+    margin-bottom: 0px;
+    padding: 2px 2px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+.caro{
+    padding-top: 0px;
+    /* padding: 5px; */
+}
+    
+    .my-carousel{
+        padding: 3px;
+        border-radius: 20px;
+        background-color: #f0f0f0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* margin-top: 20px; */
+        /* margin-bottom: auto; */
+    
+    }
+
+    .carousel-inner{
+        padding: 10px;
+        margin-bottom: 0px;
+    }
+
+    .carousel-inner img {
+        width: 40%;
+        height: 120px;
+        object-fit: cover;
+    }
+
+ /* profileare profile card */  
+ 
+/* 0owner profile */
+.owner-pro{
+    padding: 0px;
+
+}
+.round-inner{
+height: fit-content;
+width: 160px;
+position: relative;
+left: 69.4%;
+font-size: 14px;
+padding: 0;
+border-radius: 10px;
+}
+
+.profilearea-profile-image{
+width: 20%;
+border-radius: 80px;
+}
+   
+.profilearea-profile-card {
+    padding: 10px;
+    margin-bottom: 0px;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* height: 100%; */
+    
+}
+
+
+.profilearea-profile-image {
+    width: 39%;
+    background-color: #4267B2;
+    padding: 2px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profilearea-profile-name {
+    font-weight: bolder;
+    font-size: 11px;
+    color: #4267B2; /* Facebook blue */
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.profilearea-category {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+
+}
+
+.profilearea-item-text {
+    color: #333;
+    font-size: 9px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.profilearea-btn-primary {
+    background-color: #4267B2; /* Facebook blue */
+    border-color: #4267B2; /* Facebook blue */
+    width: 100%;
+    font-size: 8px;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;        
+}
+
+
+.profile-card {
+background-color: #fff;
+ border-radius: 10px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ padding: 0px;
+ margin-bottom: 5px;
+}
+
+    .profile-image {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+
+    .profile-name {
+        font-weight: bold;
+        color: #4267B2; /* Facebook blue */
+        margin-bottom: 5px;
+        font-size: 8px;
+    }
+
+    .profile-info {
+        color: #333;
+        margin-bottom: 20px;
+        font-size:5px;
+    }
+
+    
+.search-container {
+position: relative;
+}
+
+.search-input {
+padding: 8px 30px; /* Adjust as needed */
+border: none;
+border-radius: 20px; /* Adjust to match your design */
+background-color: #ffffff; /* Match your design */
+font-size: 14px;
+width: 200px; /* Adjust width as needed */
+transition: width 0.4s ease-in-out;
+}
+
+.search-input:focus {
+width: 500px; /* Adjust expanded width as needed */
+outline: none;
+}
+
+.search-icon {
+position: absolute;
+top: 50%;
+right: 10px; /* Adjust as needed */
+transform: translateY(-50%);
+color: #555; /* Match your design */
+cursor: pointer;
+}
+
+.container {
+max-width: 1400px;
+margin: 20px auto;
+padding-top: 10px;
+}
+
+.sidebar{
+height: fit-content;
+}
+
+.sidebar,
+.sidebar-inner {
+background-color: #fefcfc;
+padding: 10px;
+border-radius: 10px;
+box-shadow: 0 0 10px #0000001a;
+
+}
+
+.sidebar-title {
+font-weight: bold;
+margin-bottom: 15px;
+font-size: 14px;
+font-family: 'Times New Roman', Times, serif;
+}
+
+.sidebar-list {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.sidebar-item {
+margin-bottom: 10px;
+display: flex;
+align-items: center;
+transition: all 0.3s ease;
+}
+
+
+/* icons */
+.sidebar-item i {
+margin-right: 10px;
+font-size: 10px;
+width: 10px;
+text-align: center;
+color: #4267B2;
+
+}
+
+.sidebar-link {
+color: #333;
+text-decoration: none;
+font-size: 14px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar-link:hover {
+color: #4267B2; /* Facebook blue */
+transform: translateX(5px);
+}
+
+    
+    .randomusers-container {    
+    max-width: 1370px;
+    margin: 10px auto;
+    height: 85vh;
+    overflow-y:unset;
+}
+
+.randomusers-container h2 {  
+    width: 100%;
+    margin: auto;  
+padding: 5px 0px;
+border-radius: 5px;
+font-size: 12px;
+}
+
+.randomusers-container .profile-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    margin-bottom: 10px;
+    width:150px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+    /* height: 360px; */
+}
+
+
+
+.randomusers-container .profile-image {
+    width: 50%;
+    height: fit-content;
+    border-radius: 100%;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.randomusers-container .profile-name {
+    font-weight: bold;
+
+    font-size: 10px;
+    color: #4267B2; /* Facebook blue */
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.randomusers-container .category {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+
+    /* background-color: rgb(225, 225, 230); */
+}
+
+.randomusers-container .item-text {
+    color: #333;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-size: smaller;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.randomusers-container .btn-primary {
+    background-color: #4267B2; /* Facebook blue */
+    border-color: #4267B2; /* Facebook blue */
+    /* margin: 0px 20px; */
+    padding: 2px 2px;
+    font-size: 9px;
+    margin-top: 0px;
+    
+}
+
+
+
+/* view portfolio btn only */
+.randomusers-container .viewportfolio{
+    /* background-color: rgb(122, 93, 93); */
+    position: relative;
+    width: 90%;
+    padding: 0px;
+    margin: auto;
+
+    
+}
+
+.randomusers-container .btn-primary:hover {
+    background-color: #2e4a92; /* Darker shade of Facebook blue */
+    border-color: #2e4a92; /* Darker shade of Facebook blue */
+}
+
+
+.job-container{
+    width: 100%;
+    margin-bottom: 10px;
+    overflow-y: visible;
+    
+    
+}
+.available-jobs{
+background-color:  #fff;
+width: 100%;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 20px;
+/* height: 100%; */
+}
+
+/* company */
+.job-card>span{
+font-size: 12px;
+padding: 5px 0px;
+}
+
+.available-jobs h2{
+font-size: 12px;
+margin-top: 10px;
+padding: 10px;
+border-radius: 5px;
+margin-bottom: 10px;
+color: #08539e;
+font-family: 'Times New Roman', Times, serif;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+letter-spacing: 2px;
+text-transform: capitalize;
+text-align: center;
+/* text-shadow: #333 0 0  1px; */
+}
+
+
+.job-card img {
+display: flex;
+width: 25px;
+height: 30px;
+margin-right: 10px;
+border-radius: 50%;
+object-fit: cover; /*Ensure the image maintains its aspect ratio and covers the entire space*/
+}
+
+.job-card {
+    width: 90%;
+    display: flex;
+    margin: 2px;
+background-color: #f9f9f9;
+border-radius: 5px;
+padding: 10px;
+cursor: pointer;
+flex-direction: column;
+transition: background-color 0.3s, transform 0.3s;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.other-feeds{
+display: flex;
+width: 100%;
+/* flex-direction: column; */
+}
+
+.job-card:hover {
+background-color: gold;
+transform: translateY(-3px);
+box-shadow: 0px 0px 10px blue;
+}
+
+
+.job-card p {
+margin: 0;
+color: #666;
+font-size: 8px;
+}
+
+/* Optional: Add styles for the job title */
+.job-card h3 {
+color: #333;
+font-size: 9px;
+font-weight: bold;
+
+}
+
+
+/* Feed Container */
+.feed-container {
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 10px;
+margin-bottom: 20px;
+height: 82vh;
+overflow-y: hidden;
+padding-bottom: 10px;
+}
+
+.feed-container h2 {
+    width: 100%;
+font-size: 20px;
+margin-top: 20px;
+padding: 10px;
+border-radius: 5px;
+margin-bottom: 20px;
+color: #08539e;
+font-family: 'Times New Roman', Times, serif;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+letter-spacing: 5px;
+text-transform: capitalize;
+text-align: center;
+
+}
+
+/* Placeholder */
+#postContent::placeholder {
+/* Center align placeholder text both horizontally and vertically */
+font-size: 10px;
+vertical-align: middle;
+margin: auto;
+padding-top: 10px; /* Inherit line height */
+}
+
+
+#postContent {
+width: 50%;
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+resize: none;
+margin-bottom: 10px;
+outline: none; /* Remove focus outline */
+overflow-y: visible;
+}
+
+#postContent:focus {
+border-color: #4267B2; /* Facebook blue */
+}
+
+#postForm button {
+background-color: #4267B2; /* Facebook blue */
+color: #fff;
+border: none;
+padding: 5px 10px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+}
+
+#postForm button:hover {
+background-color: #2e4a92; /* Darker shade of Facebook blue */
+}
+
+/* Feed Item */
+.feed-item {
+border-bottom: 1px solid #ddd;
+padding-bottom: 15px;
+margin-bottom: 15px;
+}
+
+.feed-user {
+font-weight: bold;
+color: #4267B2; /* Facebook blue */
+margin-bottom: 5px;
+}
+
+.feed-content {
+color: #333;
+margin-bottom: 10px;
+}
+
+/* Like Button */
+.like-btn {
+background-color: transparent;
+border: none;
+cursor: pointer;
+font-weight: bold;
+color: #4a18ae;
+}
+
+.like-btn.liked {
+color: #4267B2; /* Facebook blue */
+}
+
+/* Comment Button */
+.comment-btn {
+background-color: transparent;
+border: none;
+cursor: pointer;
+font-weight: bold;
+color: #555;
+
+}
+
+/* Comment Input */
+.comment-input {
+width: calc(100% - 90px);
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 5px;
+margin-right: 10px;
+font-size: 10px;
+}
+
+/* Comment List */
+.post-comments {
+margin-top: 10px;
+font-size: 10px;
+}
+
+/* Delete Comment Button */
+.delete-comment-btn {
+background-color: #f44336; /* Red */
+color: #fff;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+padding: 5px 10px;
+margin-left: 10px;
+}
+
+.delete-comment-btn:hover {
+background-color: #d32f2f; /* Darker shade of Red */
+}
+
+#postContent:focus {
+border-color: #4267B2; /* Facebook blue */
+}
+
+#postForm button {
+background-color: #4267B2; /* Facebook blue */
+color: #fff;
+border: none;
+padding: 4px 8px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+}
+
+#postForm button:hover {
+background-color: #2e4a92; /* Darker shade of Facebook blue */
+}
+
+/* Like Count */
+.like-count {
+color: #555;
+margin-right: 10px;
+}
+
+/* Comment Count */
+.comment-count {
+color: #555;
+margin-left: 10px;
+}
+
+/* posted File Container (video and images)*/
+
+
+.post-files img:hover,
+.post-files video:hover {
+transform: scale(1.1);
+}
+
+/* Overlay for full-size image or video */
+.overlay {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.9);
+z-index: 999;
+}
+
+.overlay-content {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+}
+
+.overlay-image,
+.overlay-video {
+max-width: 90%;
+max-height: 90%;
+}
+
+/* chech */
+
+
+.post-files {
+max-width: 30%;
+/* background-color: red; */
+margin-top: 10px;
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+align-items: flex-start; /* Align items to the top */
+/* overflow-y: hidden; Hide overflow */
+}
+
+
+/* Image */
+.post-image {
+max-width: 40%;
+height: auto;
+border-radius: 5px;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+
+/* Video */
+.post-video {
+max-width: 100%;
+border-radius: 5px;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+
+/* Comment Button */
+.comment-btn {
+background-color: #4267B2; /* Facebook blue */
+color: #fff;
+border: none;
+padding: 5px 10px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 10px;
+transition: background-color 0.3s;
+}
+
+.comment-btn:hover {
+background-color: #2e4a92; /* Darker shade of Facebook blue */
+}
+
+.feeds {
+padding: 20px;
+max-height: 100%; /* without this height this container post will never scrol*/
+overflow-y: scroll; /* Allow vertical scrolling */
+margin-bottom: 100px;
+}
+
+.feeds::-webkit-scrollbar{
+display: none;
+}
+
+.feeds-container-area{
+background-color:  #fff;
+height: 50vh;
+overflow-y: hidden;
+margin-bottom: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+font-size: 10px;
+
+}
+
+/* feeds ends here */
+
+
+
+/* Optional: Add styles for the job location and period */
+
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.randomusers-container::-webkit-scrollbar,
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+ /* Styles for randomusers-container and container */
+ .randomusers-container-border {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50vh; /* Adjust as needed */
+    border: 1px solid #ccc; /* Border color */
+    background-color: #f5f5f5; /* Background color */
+    z-index: 1; /* Ensure the border is above the content */
+}
+
+.container-border {
+    position: fixed;
+    top: 50vh; /* Aligns with the bottom of randomusers-container */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 1px solid #ccc; /* Border color */
+    background-color: #f5f5f5; /* Background color */
+    z-index: 1; /* Ensure the border is above the content */
+}
+
+/* Shadow effect */
+.container-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    z-index: 0; /* Behind the content */
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.randomusers-container, .container {
+    overflow-y:hidden;
+    overflow: scroll;
+}
+
+.randomusers-container::-webkit-scrollbar, .container::-webkit-scrollbar {
+    display: none;
+}
+
+.buttons-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: 10px;
+}
+
+
+.nav-item> a{
+/* background-color: red; */
+color: rgb(76, 76, 76);
+}
+.buttons-container button,
+.buttons-container span {
+margin-right: 10px;
+}
+.footer{
+width: 100%;
+font-size: 8px;
+}
+
+.social-meia-links{
+font-size: 8px;
+}
+
+.footer-content:hover{
+    color: gold;
+}
+
+.footer-section>h3{
+font-size: 12px;
+}
+
+.footer-section:hover{
+color: white;
+
+}
+
+}
+
+/* smallest phones */
+/* phone screen */
+/* Responsive Styling */
+@media (min-width:150px) and (max-width: 320px){
+
+    .container {
+            max-width: 100%;
+            margin: 0px auto;
+            padding-top: 0px;
+        }
+
+
+.nav-item> a{
+/* background-color: red; */
+color: rgb(76, 76, 76);
+
+}
+
+header {
+    background-color: #2e4a92; /* Facebook blue */       
+    color: #fff;       
+    padding: 2px 0;       
+    text-align: center;      
+    margin-bottom: 8px;
+ }
+
+.navbar{
+    padding: 2px;
+    color: dark;
+}
+
+.nav-item a{
+    color: black;
+
+}
+
+.nav-link{
+    z-index: 500;
+}
+
+.navbar-brand{
+    font-size: 10px;
+}
+
+.sidebar {
+width: 190px;
+position: absolute;
+left: -0;
+transform: translateX(-100%);
+height: fit-content;
+padding-left: 2px;
+padding-right: 2px;
+
+}
+
+
+.sidebar.collapsed {
+transform: translateX(0);
+overflow: visible;
+z-index: 500;
+padding: 5px;
+}
+
+.sidebar-list{
+    /* background-color: red; */
+    padding: 0px;
+    margin: 0px;
+    font-size: 2px;
+}
+
+.sidebar-title{
+    font-size: 2px;
+}
+
+.sidebar-item>a{
+    font-size: 8px;
+}
+
+.sidebar h3{
+    font-size: 8px;
+}
+
+.sidebar-item i{
+    font-size: 2px;
+}
+.col-lg-6{
+    width: 300px;
+position: absolute;
+left: 1px;
+
+}
+
+
+/* here */
+.carousel {
+    margin-bottom: 0px;
+    padding: 2px 2px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+.caro{
+    padding-top: 0px;
+    /* padding: 5px; */
+}
+    
+    .my-carousel{
+        padding: 3px;
+        border-radius: 20px;
+        background-color: #f0f0f0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* margin-top: 20px; */
+        /* margin-bottom: auto; */
+    
+    }
+
+    .carousel-inner{
+        padding: 10px;
+        margin-bottom: 0px;
+    }
+
+    .carousel-inner img {
+        width: 40%;
+        height: 120px;
+        object-fit: cover;
+    }
+
+ /* profileare profile card */  
+ 
+/* 0owner profile */
+.owner-pro{
+    padding: 0px;
+
+}
+.round-inner{
+height: fit-content;
+width: 160px;
+position: relative;
+left: 69.4%;
+font-size: 14px;
+padding: 0;
+border-radius: 10px;
+}
+
+.profilearea-profile-image{
+width: 20%;
+border-radius: 80px;
+}
+   
+.profilearea-profile-card {
+    padding: 8px;
+    margin-bottom: 0px;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* height: 100%; */
+    
+}
+
+
+.profilearea-profile-image {
+    width: 39%;
+    background-color: #4267B2;
+    padding: 2px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profilearea-profile-name {
+    font-weight: bolder;
+    font-size: 11px;
+    color: #4267B2; /* Facebook blue */
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.profilearea-category {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+
+}
+
+.profilearea-item-text {
+    color: #333;
+    font-size: 9px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.profilearea-btn-primary {
+    background-color: #4267B2; /* Facebook blue */
+    border-color: #4267B2; /* Facebook blue */
+    width: 100%;
+    font-size: 8px;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;        
+}
+
+
+.profile-card {
+background-color: #fff;
+ border-radius: 10px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ padding: 0px;
+ margin-bottom: 5px;
+}
+
+    .profile-image {
+        width: 80%;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+
+    .profile-name {
+        font-weight: bold;
+        color: #4267B2; /* Facebook blue */
+        margin-bottom: 5px;
+        font-size: 8px;
+    }
+
+    .profile-info {
+        color: #333;
+        margin-bottom: 10px;
+        font-size:5px;
+    }
+
+    
+.search-container {
+position: relative;
+}
+
+.search-input {
+padding: 8px 30px; /* Adjust as needed */
+border: none;
+border-radius: 20px; /* Adjust to match your design */
+background-color: #ffffff; /* Match your design */
+font-size: 14px;
+width: 200px; /* Adjust width as needed */
+transition: width 0.4s ease-in-out;
+}
+
+.search-input:focus {
+width: 500px; /* Adjust expanded width as needed */
+outline: none;
+}
+
+.search-icon {
+position: absolute;
+top: 50%;
+right: 10px; /* Adjust as needed */
+transform: translateY(-50%);
+color: #555; /* Match your design */
+cursor: pointer;
+}
+
+.container {
+max-width: 1400px;
+margin: 20px auto;
+padding-top: 10px;
+}
+
+.sidebar{
+height: fit-content;
+}
+
+.sidebar,
+.sidebar-inner {
+background-color: #fff;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px #0000001a;
+
+}
+
+.sidebar-title {
+font-weight: bold;
+margin-bottom: 15px;
+font-size: 14px;
+font-family: 'Times New Roman', Times, serif;
+}
+
+.sidebar-list {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.sidebar-item {
+margin-bottom: 10px;
+display: flex;
+align-items: center;
+transition: all 0.3s ease;
+}
+
+.sidebar-item i {
+margin-right: 20px;
+font-size: 15px;
+width: 20px;
+text-align: center;
+color: #4267B2;
+}
+
+.sidebar-link {
+color: #333;
+text-decoration: none;
+font-size: 14px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar-link:hover {
+color: #4267B2; /* Facebook blue */
+transform: translateX(5px);
+}
+
+    
+    .randomusers-container {    
+    max-width: 100%;
+    margin: 10px auto;
+    height: 85vh;
+    overflow-y:unset;
+}
+
+.randomusers-container h2 {  
+    width: 100%;
+    margin: auto;  
+padding: 5px 0px;
+border-radius: 5px;
+font-size: 12px;
+}
+
+.randomusers-container .profile-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    margin-bottom: 10px;
+    width:140px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+    /* height: 360px; */
+}
+
+
+
+.randomusers-container .profile-image {
+    width: 50%;
+    height: fit-content;
+    border-radius: 100%;
+    margin-bottom: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.randomusers-container .profile-name {
+    font-weight: bold;
+
+    font-size: 10px;
+    color: #4267B2; /* Facebook blue */
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.randomusers-container .category {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+
+    /* background-color: rgb(225, 225, 230); */
+}
+
+.randomusers-container .item-text {
+    color: #333;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-size: smaller;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.randomusers-container .btn-primary {
+    background-color: #4267B2; /* Facebook blue */
+    border-color: #4267B2; /* Facebook blue */
+    padding: 2px 2px;
+    font-size: 9px;
+    margin-top: 0px;
+}
+
+
+
+/* view portfolio btn only */
+.randomusers-container .viewportfolio{
+    /* background-color: rgb(122, 93, 93); */
+    position: relative;
+    width: 90%;
+    padding: 0px;
+    margin: auto;
+
+    
+}
+
+.randomusers-container .btn-primary:hover {
+    background-color: #2e4a92; /* Darker shade of Facebook blue */
+    border-color: #2e4a92; /* Darker shade of Facebook blue */
+}
+
+
+.job-container{
+    width: 100%;
+    margin-bottom: 20px;
+    overflow-y: visible;
+    
+    
+}
+.available-jobs{
+background-color:  #fff;
+width: 100%;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 20px;
+/* height: 100%; */
+}
+
+/* company */
+.job-card>span{
+font-size: 12px;
+padding: 5px 0px;
+}
+
+.available-jobs h2{
+font-size: 12px;
+margin-top: 10px;
+padding: 10px;
+border-radius: 5px;
+margin-bottom: 10px;
+color: #08539e;
+font-family: 'Times New Roman', Times, serif;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+letter-spacing: 2px;
+text-transform: capitalize;
+text-align: center;
+/* text-shadow: #333 0 0  1px; */
+}
+
+
+.job-card img {
+display: flex;
+width: 25px;
+height: 30px;
+margin-right: 10px;
+border-radius: 50%;
+object-fit: cover; /*Ensure the image maintains its aspect ratio and covers the entire space*/
+}
+
+.job-card {
+    width: 90%;
+    display: flex;
+    margin: 2px;
+background-color: #f9f9f9;
+border-radius: 5px;
+padding: 10px;
+cursor: pointer;
+flex-direction: column;
+transition: background-color 0.3s, transform 0.3s;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.other-feeds{
+display: flex;
+width: 100%;
+/* flex-direction: column; */
+}
+
+.job-card:hover {
+background-color: gold;
+transform: translateY(-3px);
+box-shadow: 0px 0px 10px blue;
+}
+
+
+.job-card p {
+margin: 0;
+color: #666;
+font-size: 8px;
+}
+
+/* Optional: Add styles for the job title */
+.job-card h3 {
+color: #333;
+font-size: 9px;
+font-weight: bold;
+
+}
+
+
+/* Feed Container */
+.feed-container {
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 10px;
+margin-bottom: 20px;
+height: 82vh;
+overflow-y: hidden;
+padding-bottom: 10px;
+}
+
+.feed-container h2 {
+font-size: 20px;
+margin-top: 20px;
+padding: 10px;
+border-radius: 5px;
+margin-bottom: 20px;
+color: #08539e;
+font-family: 'Times New Roman', Times, serif;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+letter-spacing: 5px;
+text-transform: capitalize;
+text-align: center;
+
+}
+
+/* Placeholder */
+#postContent::placeholder {
+/* Center align placeholder text both horizontally and vertically */
+font-size: 10px;
+vertical-align: middle;
+margin: auto;
+padding-top: 10px; /* Inherit line height */
+}
+
+#postContent {
+width: 50%;
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+resize: none;
+margin-bottom: 10px;
+outline: none; /* Remove focus outline */
+overflow-y: visible;
+}
+
+#postContent:focus {
+border-color: #4267B2; /* Facebook blue */
+}
+
+#postForm button {
+background-color: #4267B2; /* Facebook blue */
+color: #fff;
+border: none;
+padding: 5px 10px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+}
+
+#postForm button:hover {
+background-color: #2e4a92; /* Darker shade of Facebook blue */
+}
+
+/* Feed Item */
+.feed-item {
+border-bottom: 1px solid #ddd;
+padding-bottom: 15px;
+margin-bottom: 15px;
+}
+
+.feed-user {
+font-weight: bold;
+color: #4267B2; /* Facebook blue */
+margin-bottom: 5px;
+}
+
+.feed-content {
+color: #333;
+margin-bottom: 10px;
+}
+
+/* Like Button */
+.like-btn {
+background-color: transparent;
+border: none;
+cursor: pointer;
+font-weight: bold;
+color: #4a18ae;
+}
+
+.like-btn.liked {
+color: #4267B2; /* Facebook blue */
+}
+
+/* Comment Button */
+.comment-btn {
+background-color: transparent;
+border: none;
+cursor: pointer;
+font-weight: bold;
+color: #555;
+
+}
+
+/* Comment Input */
+.comment-input {
+width: calc(100% - 90px);
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 5px;
+margin-right: 10px;
+font-size: 10px;
+}
+
+/* Comment List */
+.post-comments {
+margin-top: 10px;
+font-size: 10px;
+}
+
+/* Delete Comment Button */
+.delete-comment-btn {
+background-color: #f44336; /* Red */
+color: #fff;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+padding: 5px 10px;
+margin-left: 10px;
+}
+
+.delete-comment-btn:hover {
+background-color: #d32f2f; /* Darker shade of Red */
+}
+
+#postContent:focus {
+border-color: #4267B2; /* Facebook blue */
+}
+
+#postForm button {
+background-color: #4267B2; /* Facebook blue */
+color: #fff;
+border: none;
+padding: 4px 8px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+}
+
+#postForm button:hover {
+background-color: #2e4a92; /* Darker shade of Facebook blue */
+}
+
+/* Like Count */
+.like-count {
+color: #555;
+margin-right: 10px;
+}
+
+/* Comment Count */
+.comment-count {
+color: #555;
+margin-left: 10px;
+}
+
+/* posted File Container (video and images)*/
+
+
+.post-files img:hover,
+.post-files video:hover {
+transform: scale(1.1);
+}
+
+/* Overlay for full-size image or video */
+.overlay {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.9);
+z-index: 999;
+}
+
+.overlay-content {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+}
+
+.overlay-image,
+.overlay-video {
+max-width: 90%;
+max-height: 90%;
+}
+
+/* chech */
+
+
+.post-files {
+max-width: 30%;
+/* background-color: red; */
+margin-top: 10px;
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+align-items: flex-start; /* Align items to the top */
+/* overflow-y: hidden; Hide overflow */
+}
+
+
+/* Image */
+.post-image {
+max-width: 40%;
+height: auto;
+border-radius: 5px;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+
+/* Video */
+.post-video {
+max-width: 100%;
+border-radius: 5px;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+
+/* Comment Button */
+.comment-btn {
+background-color: #4267B2; /* Facebook blue */
+color: #fff;
+border: none;
+padding: 5px 10px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 10px;
+transition: background-color 0.3s;
+}
+
+.comment-btn:hover {
+background-color: #2e4a92; /* Darker shade of Facebook blue */
+}
+
+.feeds {
+padding: 20px;
+max-height: 100%; /* without this height this container post will never scrol*/
+overflow-y: scroll; /* Allow vertical scrolling */
+margin-bottom: 100px;
+}
+
+.feeds::-webkit-scrollbar{
+display: none;
+}
+
+.feeds-container-area{
+background-color:  #fff;
+height: 50vh;
+overflow-y: hidden;
+margin-bottom: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+font-size: 10px;
+
+}
+
+/* feeds ends here */
+
+
+
+/* Optional: Add styles for the job location and period */
+
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.randomusers-container::-webkit-scrollbar,
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+ /* Styles for randomusers-container and container */
+ .randomusers-container-border {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50vh; /* Adjust as needed */
+    border: 1px solid #ccc; /* Border color */
+    background-color: #f5f5f5; /* Background color */
+    z-index: 1; /* Ensure the border is above the content */
+}
+
+.container-border {
+    position: fixed;
+    top: 50vh; /* Aligns with the bottom of randomusers-container */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 1px solid #ccc; /* Border color */
+    background-color: #f5f5f5; /* Background color */
+    z-index: 1; /* Ensure the border is above the content */
+}
+
+/* Shadow effect */
+.container-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    z-index: 0; /* Behind the content */
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.randomusers-container, .container {
+    overflow-y:hidden;
+    overflow: scroll;
+}
+
+.randomusers-container::-webkit-scrollbar, .container::-webkit-scrollbar {
+    display: none;
+}
+
+.buttons-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: 10px;
+}
+
+
+.nav-item> a{
+/* background-color: red; */
+color: rgb(76, 76, 76);
+}
+.buttons-container button,
+.buttons-container span {
+margin-right: 10px;
+}
+.footer{
+width: 100%;
+font-size: 8px;
+}
+
+.social-meia-links{
+font-size: 8px;
+}
+
+.footer-content:hover{
+    color: gold;
+}
+
+.footer-section>h3{
+font-size: 12px;
+}
+
+.footer-section:hover{
+color: white;
+
+}
+
+}
     </style>
 </head>
 
@@ -1103,15 +4658,16 @@
     <!-- Header Section -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="#">Freelancer Connect</a>
-                <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="container nav-flex">
+                <div class=" navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
+                        <a class="navbar-brand" href="dashboard.html">Freelancer Connect</a>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="dashboard.html">Home</a>
+                            <a class="nav-link " href="dashboard.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./profile.html">Eidt Profile</a>
+                            <a class="nav-link" href="./profile.html">Profile</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Portfolio</a>
@@ -1139,68 +4695,64 @@
     <div class="container">
         <div class="row">
             <!-- Sidebar Section -->
-<div class="col-lg-3 prof">
-    <div class="sidebar">
-        <div class="sidebar-inner">
-        <h3 class="sidebar-title">Explore Categories</h3>
-        <ul class="sidebar-list">
-            <li class="sidebar-item">
-                <i class="fas fa-laptop-code"></i>
-                <a href="#" class="sidebar-link">Web Development</a>
-            </li>
-            <li class="sidebar-item">
-                <i class="fas fa-paint-brush"></i>
-                <a href="#" class="sidebar-link">Graphic Design</a>
-            </li>
-            <li class="sidebar-item">
-                <i class="fas fa-edit"></i>
-                <a href="#" class="sidebar-link">Copywriting</a>
-            </li>
-            <li class="sidebar-item">
-                <i class="fas fa-chart-line"></i>
-                <a href="#" class="sidebar-link">Digital Marketing</a>
-            </li>
-        </ul>
-        <!-- New categories with links -->
-        <h3 class="sidebar-title">Browse Projects</h3>
-        <ul class="sidebar-list">
-            <li class="sidebar-item">
-                <i class="fas fa-laptop-code"></i>
-                <a href="#" class="sidebar-link">Web Development</a>
-            </li>
-            <li class="sidebar-item">
-                <i class="fas fa-paint-brush"></i>
-                <a href="#" class="sidebar-link">Graphic Design</a>
-            </li>
-            <li class="sidebar-item">
-                <i class="fas fa-edit"></i>
-                <a href="#" class="sidebar-link">Copywriting</a>
-            </li>
-            <li class="sidebar-item">
-                <i class="fas fa-chart-line"></i>
-                <a href="#" class="sidebar-link">Digital Marketing</a>
-            </li>
-            <!-- Add more project categories as needed -->
-        </ul>
-        <h3 class="sidebar-title">Portfolio Categories</h3>
-        <ul class="sidebar-list">
-            <li class="sidebar-item">
-                <i class="fas fa-image"></i>
-                <a href="#" class="sidebar-link">Illustration</a>
-            </li>
-            <li class="sidebar-item">
-                <i class="fas fa-video"></i>
-                <a href="#" class="sidebar-link">Video Editing</a>
-            </li>
-            <!-- Add more portfolio categories as needed -->
-        </ul>
-    </div>
-    </div>
-
-</div>
+            <div class="col-lg-3 prof">
+                <div class="sidebar">
+                    <div class="sidebar-inner">
+                        <h3 class="sidebar-title">Explore Categories</h3>
+                        <ul class="sidebar-list">
+                            <li class="sidebar-item">
+                                <i class="fas fa-laptop-code"></i>
+                                <a href="#" class="sidebar-link" id="category-web-development">Web Development</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <i class="fas fa-paint-brush"></i>
+                                <a href="#" class="sidebar-link" id="category-graphic-design">Graphic Design</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <i class="fas fa-edit"></i>
+                                <a href="#" class="sidebar-link" id="category-copywriting">Copywriting</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <i class="fas fa-chart-line"></i>
+                                <a href="#" class="sidebar-link" id="category-digital-marketing">Digital Marketing</a>
+                            </li>
+                        </ul>
+                        <h3 class="sidebar-title">Browse Projects</h3>
+                        <ul class="sidebar-list">
+                            <li class="sidebar-item">
+                                <i class="fas fa-laptop-code"></i>
+                                <a href="#" class="sidebar-link" id="projects-web-development">Web Development</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <i class="fas fa-paint-brush"></i>
+                                <a href="#" class="sidebar-link" id="projects-graphic-design">Graphic Design</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <i class="fas fa-edit"></i>
+                                <a href="#" class="sidebar-link" id="projects-copywriting">Copywriting</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <i class="fas fa-chart-line"></i>
+                                <a href="#" class="sidebar-link" id="projects-digital-marketing">Digital Marketing</a>
+                            </li>
+                        </ul>
+                        <h3 class="sidebar-title">Portfolio Categories</h3>
+                        <ul class="sidebar-list">
+                            <li class="sidebar-item">
+                                <i class="fas fa-image"></i>
+                                <a href="#" class="sidebar-link" id="portfolio-illustration">Illustration</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <i class="fas fa-video"></i>
+                                <a href="#" class="sidebar-link" id="portfolio-video-editing">Video Editing</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
             <!-- Carousel Section -->
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-12 caro colmb-4">
                 <div class="my-carousel">
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
@@ -1243,7 +4795,7 @@
 
 
             <!-- Profile Section -->
-            <div class="col-lg-3 rounded-3 " >
+            <div class="col-lg-3 rounded-4  owner-pro" >
                 <div class="round-inner">
                     <div class="profilearea" id="profileContainer">
                         <!-- Profile card will be dynamically generated here --> 
@@ -1258,7 +4810,7 @@
 
     <!-- Random Users Section -->
     <div class="randomusers-container">
-        <div class="col mt-4">
+        <div class="col mt-1 derandom">
             <h2 class="text-center mb-4">Connecting Talents: Freelancer Hiring Across All Industries (Hire at Ease)</h2>
             <div class="row" id="randomUsersContainer">
                 <!-- Random user cards will be dynamically generated here -->
@@ -1266,10 +4818,10 @@
         </div>
     </div>
     
-    <div class="container" style="height: calc(100vh - 100px); overflow-y: scroll;">
-        <div class="row">
+    <div class="container">
+        <div class="row timelineandjob">
             <!-- Available jobs column -->
-            <div class="col-lg-3 h-100">
+            <div class="col-lg-3 h-100 job-container">
                 <div class="available-jobs">
                     <h2>Available jobs</h2>
                     <div class="other-feeds" id="jobList">
@@ -1279,16 +4831,16 @@
             </div>
             
             <!-- Feed container -->
-            <div class="col-lg-9">
+            <div class="col-lg-9 timeline">
                 <div class="row">
                     <div class="col-12">
                         <div class="feed-container">
                             <h2>Timeline feeds from users all around the world</h2>
                             <!-- Post Form -->
                             <form id="postForm" enctype="multipart/form-data">
-                                <textarea id="postContent" placeholder="What is new?">This is a default post.</textarea>
+                                <textarea id="postContent" placeholder="What is new? show it to the world"></textarea>
                                 <div class="post-options">
-                                    <input type="file" id="fileInput" accept="image/*, video/*" multiple>
+                                    <input type="file" id="fileInput" accept="image, video" multiple>
                                     <label for="fileInput"><i class="fas fa-camera"></i></label>
                                     <button type="submit">Post</button>
                                 </div>
@@ -1370,8 +4922,6 @@
     </footer>
     
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- JavaScript for generating profile cards when there is no user -->
@@ -1685,69 +5235,128 @@ generateSingleProfileCard();
     
     
 ];
-        // Function to generate default profile cards on randomUsersContainer
-        function generateDefaultProfileCards() {
-            let randomUsersContainer = document.getElementById('randomUsersContainer');
+let profiles = [...defaultProfiles];
 
-            // Loop through default profiles and create a card for each
-            defaultProfiles.forEach(profile => {
-                // Create profile card elements
-                let profileCard = document.createElement('div');
-                profileCard.classList.add('col-lg-3', 'profile-card');
+document.querySelectorAll('.sidebar-link').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const categoryText = this.textContent.trim();
+        const categoryMap = {
+            'Web Development': 'Web Developer',
+            'Graphic Design': 'Graphic Designer',
+            'Copywriting': 'Copywriter',
+            'Digital Marketing': 'Digital Marketer',
+            'Illustration': 'Illustrator',
+            'Video Editing': 'Video Editor'
+        };
+        const category = categoryMap[categoryText] || categoryText;
+        displayProfilesByCategory(category);
+    });
+});
 
-                let profileImage = document.createElement('img');
-                profileImage.src = profile.img;
-                profileImage.classList.add('profile-image');
-                profileImage.alt = 'Profile Image';
+function displayProfilesByCategory(category) {
+    const filteredProfiles = profiles.filter(profile => profile.category === category);
+    const randomUsersContainer = document.getElementById('randomUsersContainer');
+    randomUsersContainer.innerHTML = '';
+    filteredProfiles.forEach(profile => {
+        const profileCard = document.createElement('div');
+        profileCard.classList.add('col-lg-3', 'profile-card');
 
-                let profileName = document.createElement('h3');
-                profileName.classList.add('profile-name');
-                profileName.textContent = profile.name;
+        const profileImage = document.createElement('img');
+        profileImage.src = profile.img;
+        profileImage.classList.add('profile-image');
+        profileImage.alt = 'Profile Image';
 
-                let profileCategory = document.createElement('h4');
-                profileCategory.classList.add('category');
-                profileCategory.textContent = profile.category;
+        const profileName = document.createElement('h3');
+        profileName.classList.add('profile-name');
+        profileName.textContent = profile.name;
 
-                let profileInfo = document.createElement('p');
-                profileInfo.classList.add('item-text');
-                profileInfo.textContent = profile.bio;
+        const profileCategory = document.createElement('h4');
+        profileCategory.classList.add('category');
+        profileCategory.textContent = profile.category;
 
-               // Container for links
-let linkContainer = document.createElement('div');
-linkContainer.classList.add('link-container');
+        const profileInfo = document.createElement('p');
+        profileInfo.classList.add('item-text');
+        profileInfo.textContent = profile.bio;
 
-// "Contact" link
-let viewProfileLink = document.createElement('a');
-viewProfileLink.href = "./messenger.html";
-viewProfileLink.classList.add('btn', 'btn-primary');
-viewProfileLink.textContent = 'Contact User';
+        const linkContainer = document.createElement('div');
+        linkContainer.classList.add('link-container');
 
-// "View Portfolio" link
-let viewPortfolioLink = document.createElement('a');
-viewPortfolioLink.href = "./view-portfolio-and-profile.html"; // This is where you define the link to the portfolio
-viewPortfolioLink.classList.add('btn', 'btn-primary', 'viewportfolio');
-viewPortfolioLink.textContent = 'View Portfolio';
+        const viewPortfolioLink = document.createElement('a');
+        viewPortfolioLink.href = "./view-portfolio-and-profile.html";
+        viewPortfolioLink.classList.add('btn', 'btn-primary', 'viewportfolio');
+        viewPortfolioLink.textContent = 'View Portfolio';
 
-// Append links to the container
-linkContainer.appendChild(viewProfileLink);
-linkContainer.appendChild(viewPortfolioLink);
+        linkContainer.appendChild(viewPortfolioLink);
+        profileCard.appendChild(profileImage);
+        profileCard.appendChild(profileName);
+        profileCard.appendChild(profileCategory);
+        profileCard.appendChild(profileInfo);
+        profileCard.appendChild(linkContainer);
+        randomUsersContainer.appendChild(profileCard);
+    });
+}
 
-// Append elements to profile card
-profileCard.appendChild(profileImage);
-profileCard.appendChild(profileName);
-profileCard.appendChild(profileCategory);
-profileCard.appendChild(profileInfo);
-profileCard.appendChild(linkContainer); // Append link container instead of individual links
+function generateDefaultProfileCards() {
+    const randomUsersContainer = document.getElementById('randomUsersContainer');
+    randomUsersContainer.innerHTML = '';
+    profiles.forEach(profile => {
+        const profileCard = document.createElement('div');
+        profileCard.classList.add('col-lg-3', 'profile-card');
 
+        const profileImage = document.createElement('img');
+        profileImage.src = profile.img;
+        profileImage.classList.add('profile-image');
+        profileImage.alt = 'Profile Image';
 
+        const profileName = document.createElement('h3');
+        profileName.classList.add('profile-name');
+        profileName.textContent = profile.name;
 
-                // Append profile card to container
-                randomUsersContainer.appendChild(profileCard);
-            });
-        }
+        const profileCategory = document.createElement('h4');
+        profileCategory.classList.add('category');
+        profileCategory.textContent = profile.category;
 
-        // Generate default profile cards when the page loads
-        generateDefaultProfileCards();
+        const profileInfo = document.createElement('p');
+        profileInfo.classList.add('item-text');
+        profileInfo.textContent = profile.bio;
+
+        const linkContainer = document.createElement('div');
+        linkContainer.classList.add('link-container');
+
+        const viewPortfolioLink = document.createElement('a');
+        viewPortfolioLink.href = "./view-portfolio-and-profile.html";
+        viewPortfolioLink.classList.add('btn', 'btn-primary', 'viewportfolio');
+        viewPortfolioLink.textContent = 'View Portfolio';
+
+        linkContainer.appendChild(viewPortfolioLink);
+        profileCard.appendChild(profileImage);
+        profileCard.appendChild(profileName);
+        profileCard.appendChild(profileCategory);
+        profileCard.appendChild(profileInfo);
+        profileCard.appendChild(linkContainer);
+        randomUsersContainer.appendChild(profileCard);
+    });
+}
+
+document.getElementById('registrationForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const newProfile = {
+        id: profiles.length + 1,
+        name: document.getElementById('name').value,
+        category: document.getElementById('category').value,
+        skills: document.getElementById('skills').value.split(',').map(skill => skill.trim()),
+        img: document.getElementById('img').value,
+        bio: document.getElementById('bio').value,
+        contact: document.getElementById('contact').value,
+    };
+    profiles.push(newProfile);
+    generateDefaultProfileCards();
+});
+
+// Generate default profile cards when the page loads
+generateDefaultProfileCards();
+    </script>
     </script>
 
 
@@ -2468,6 +6077,28 @@ function openOverlay(fileURL, fileType) {
 }
 
 </script>
+
+<!-- side bar collaps javascript -->
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sidebar = document.querySelector('.sidebar');
+            const toggleButton = document.createElement('button');
+            toggleButton.innerHTML = '<i class="fas fa-bars"></i>';  // Font Awesome icon
+            toggleButton.style.position = 'fixed';
+            toggleButton.style.top = '10px';
+            toggleButton.style.left = '10px';
+            toggleButton.style.zIndex = '1000';
+            toggleButton.style.background = 'none';
+            toggleButton.style.border = 'none';
+            toggleButton.style.fontSize = '24px';
+            toggleButton.style.cursor = 'pointer';
+            document.body.appendChild(toggleButton);
+        
+            toggleButton.addEventListener('click', function () {
+                sidebar.classList.toggle('collapsed');
+            });
+        });
+    </script>
 
 </body>
 
