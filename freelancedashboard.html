@@ -2852,11 +2852,15 @@
             margin: auto;
             padding-top: 0px;
         }
+
+        .navbar{
+            width: 100%;
+        }
+
     .navbar-nav{
     /* background-color: blue; */
     display: flex;
     flex-direction: row;
-    gap: 0px;
     max-width: 100%;
     }
 
@@ -2871,46 +2875,35 @@
     /* background-color: blue; */
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 15px;
     max-width: 0%;
-    font-size: 8px;
-    
+    font-size: 12px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #0080ff;
+    }
+
+    .navbar-nav a{
+        color: #449ffb;
     }
 
     .navbar-nav a:hover{
         color: #0080ff;
+        transform: translateY(2px);
     }
 
-.search-input {
-    padding: 5px 10px; /* Adjust as needed */
-    border: none;
-    border-radius: 20px; /* Adjust to match your design */
-    background-color: #6b1818; /* Match your design */
-    font-size: 8px;
-    width: 50px; /* Adjust width as needed */
-    transition: width 0.4s ease-in-out;
-}
 
-.search-input:focus {
-    width: 70px; /* Adjust expanded width as needed */
-    outline: none;
-}
 
 .navbar-brand{
-    font-size: 8x;
+    font-size: 12px;
     padding: 0;
-    margin: auto;
+    margin-left: -12px;
+    margin-right: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
 
 }
 
-.search-icon {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    color: #555;
-    cursor: pointer;
-}
+
 .nav-item> a{
 color: rgb(76, 76, 76);
 }
@@ -2938,6 +2931,45 @@ header {
 }
 
 
+
+.search-input {
+    display: none;
+    padding: 0px 0px; /* Adjust as needed */
+    border: none;
+    border-radius: 20px; /* Adjust to match your design */
+    background-color: #ffffff; /* Match your design */
+    font-size: 8px;
+    width: 0px; /* Adjust width as needed */
+    transition: none;
+    text-indent: -1px;
+    
+}
+
+.search-containe{
+    width: 0px;
+    display: none;
+}
+
+.search-input:focus {
+    width: 0px; /* Adjust expanded width as needed */
+    outline: none;
+
+}
+
+.search-input::placeholder{
+    font-size: 10px;
+}
+
+
+.search-icon {
+display: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    /* transform: translateY(-50%); */
+    color: #555;
+    cursor: pointer;
+}
 
 .sidebar {
 width: 200px;
@@ -2995,12 +3027,15 @@ left: 1px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 .caro{
-    padding-top: 0px;
-    /* padding: 5px; */
+    padding: 5px;
+    margin: 0px;
+    
 }
+
+
     
     .my-carousel{
-        padding: 3px;
+        padding: 0px;
         border-radius: 20px;
         background-color: #f0f0f0;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -3029,10 +3064,10 @@ left: 1px;
 }
 .round-inner{
 height: fit-content;
-width: 160px;
+width: 130px;
 position: relative;
 left: 69.4%;
-font-size: 14px;
+font-size: 11px;
 padding: 0;
 border-radius: 10px;
 }
@@ -3065,17 +3100,17 @@ border-radius: 80px;
 
 .profilearea-profile-name {
     font-weight: bolder;
-    font-size: 11px;
+    font-size: 10px;
     color: #4267B2; /* Facebook blue */
-    margin-bottom: 5px;
-    letter-spacing: 1px;
+    margin-bottom: 2px;
+    letter-spacing: 0px;
     font-family:'Courier New', Courier, monospace;
 }
 
 .profilearea-category {
     color: #333;
     margin-bottom: 5px;
-    font-size: 9px;
+    font-size: 7px;
     letter-spacing: 2px;
     font-weight: bolder;
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -3085,7 +3120,7 @@ border-radius: 80px;
 
 .profilearea-item-text {
     color: #333;
-    font-size: 9px;
+    font-size: 7px;
     margin-bottom: 5px;
     letter-spacing: 1px;
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -3095,6 +3130,7 @@ border-radius: 80px;
     background-color: #4267B2; /* Facebook blue */
     border-color: #4267B2; /* Facebook blue */
     width: 100%;
+    padding: 2px 2px;
     font-size: 8px;
     font-weight: bolder;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;        
@@ -3232,7 +3268,7 @@ transform: translateX(5px);
     margin: auto;  
 padding: 5px 0px;
 border-radius: 5px;
-font-size: 12px;
+font-size: 10px;
 }
 
 .randomusers-container .profile-card {
@@ -3421,15 +3457,15 @@ padding-bottom: 10px;
 
 .feed-container h2 {
     width: 100%;
-font-size: 20px;
-margin-top: 20px;
+font-size: 10px;
+margin-top: 10px;
 padding: 10px;
 border-radius: 5px;
-margin-bottom: 20px;
+margin-bottom: 10px;
 color: #08539e;
 font-family: 'Times New Roman', Times, serif;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-letter-spacing: 5px;
+letter-spacing: 3px;
 text-transform: capitalize;
 text-align: center;
 
@@ -4752,8 +4788,8 @@ color: white;
             </div>
 
             <!-- Carousel Section -->
-            <div class="col-lg-6 col-sm-12 caro colmb-4">
-                <div class="my-carousel">
+            <div class="col-lg-6 caro col-mb-4">
+                <div class="my-carousel m-0">
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -4969,7 +5005,7 @@ color: white;
             let viewProfileLink = document.createElement('a');
             viewProfileLink.href = defaultProfile.profileLink; // Updated link
             viewProfileLink.classList.add('btn', 'btn-primary', 'profilearea-btn-primary');
-            viewProfileLink.textContent = 'View Profile & Portfolio';
+            viewProfileLink.textContent = 'Profile & Portfolio';
     
             // Append elements to profile card
             profileCard.appendChild(profileImage);
