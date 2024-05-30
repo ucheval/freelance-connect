@@ -2875,7 +2875,7 @@
     /* background-color: blue; */
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 10px;
     max-width: 0%;
     font-size: 12px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -3011,7 +3011,7 @@ padding: 5px;
     font-size: 2px;
 }
 .col-lg-6{
-    width: 310px;
+    width: 60%;
 position: absolute;
 left: 1px;
 
@@ -3066,11 +3066,17 @@ left: 1px;
 height: fit-content;
 width: 130px;
 position: relative;
-left: 71.4%;
+right: -340px;
 font-size: 11px;
 padding: 0;
 border-radius: 10px;
 
+}
+
+.round-inner{
+    transform: translateX(0);
+    overflow: visible;
+    z-index: 500;
 }
 
 .profilearea-profile-image{
@@ -4737,9 +4743,13 @@ color: white;
                     <div class="sidebar-inner">
                         <h3 class="sidebar-title">Explore Categories</h3>
                         <ul class="sidebar-list">
+                        <li class="sidebar-item">
+                                <i class="fas fa-duotone fa-user"></i>
+                                <a href="#" class="sidebar-link" id="category-all">All Categories</a>
+                            </li>
                             <li class="sidebar-item">
                                 <i class="fas fa-laptop-code"></i>
-                                <a href="#" class="sidebar-link" id="category-web-development">Web Development</a>
+                                <a href="#" class="sidebar-link" id="category-all">Web Development</a>
                             </li>
                             <li class="sidebar-item">
                                 <i class="fas fa-paint-brush"></i>
@@ -5277,25 +5287,37 @@ let profiles = [...defaultProfiles];
 document.querySelectorAll('.sidebar-link').forEach(link => {
     link.addEventListener('click', function(event) {
         event.preventDefault();
-        const categoryText = this.textContent.trim();
-        const categoryMap = {
-            'Web Development': 'Web Developer',
-            'Graphic Design': 'Graphic Designer',
-            'Copywriting': 'Copywriter',
-            'Digital Marketing': 'Digital Marketer',
-            'Illustration': 'Illustrator',
-            'Video Editing': 'Video Editor'
-        };
-        const category = categoryMap[categoryText] || categoryText;
-        displayProfilesByCategory(category);
+        if (this.id === 'category-all') {
+            displayAllProfiles();
+        } else {
+            const categoryText = this.textContent.trim();
+            const categoryMap = {
+                'Web Development': 'Web Developer',
+                'Graphic Design': 'Graphic Designer',
+                'Copywriting': 'Copywriter',
+                'Digital Marketing': 'Digital Marketer',
+                'Illustration': 'Illustrator',
+                'Video Editing': 'Video Editor'
+            };
+            const category = categoryMap[categoryText] || categoryText;
+            displayProfilesByCategory(category);
+        }
     });
 });
 
 function displayProfilesByCategory(category) {
     const filteredProfiles = profiles.filter(profile => profile.category === category);
+    renderProfiles(filteredProfiles);
+}
+
+function displayAllProfiles() {
+    renderProfiles(profiles);
+}
+
+function renderProfiles(profileList) {
     const randomUsersContainer = document.getElementById('randomUsersContainer');
     randomUsersContainer.innerHTML = '';
-    filteredProfiles.forEach(profile => {
+    profileList.forEach(profile => {
         const profileCard = document.createElement('div');
         profileCard.classList.add('col-lg-3', 'profile-card');
 
@@ -5335,48 +5357,10 @@ function displayProfilesByCategory(category) {
 }
 
 function generateDefaultProfileCards() {
-    const randomUsersContainer = document.getElementById('randomUsersContainer');
-    randomUsersContainer.innerHTML = '';
-    profiles.forEach(profile => {
-        const profileCard = document.createElement('div');
-        profileCard.classList.add('col-lg-3', 'profile-card');
-
-        const profileImage = document.createElement('img');
-        profileImage.src = profile.img;
-        profileImage.classList.add('profile-image');
-        profileImage.alt = 'Profile Image';
-
-        const profileName = document.createElement('h3');
-        profileName.classList.add('profile-name');
-        profileName.textContent = profile.name;
-
-        const profileCategory = document.createElement('h4');
-        profileCategory.classList.add('category');
-        profileCategory.textContent = profile.category;
-
-        const profileInfo = document.createElement('p');
-        profileInfo.classList.add('item-text');
-        profileInfo.textContent = profile.bio;
-
-        const linkContainer = document.createElement('div');
-        linkContainer.classList.add('link-container');
-
-        const viewPortfolioLink = document.createElement('a');
-        viewPortfolioLink.href = "./view-portfolio-and-profile.html";
-        viewPortfolioLink.classList.add('btn', 'btn-primary', 'viewportfolio');
-        viewPortfolioLink.textContent = 'View Portfolio';
-
-        linkContainer.appendChild(viewPortfolioLink);
-        profileCard.appendChild(profileImage);
-        profileCard.appendChild(profileName);
-        profileCard.appendChild(profileCategory);
-        profileCard.appendChild(profileInfo);
-        profileCard.appendChild(linkContainer);
-        randomUsersContainer.appendChild(profileCard);
-    });
+    renderProfiles(profiles);
 }
 
-document.getElementById('registrationForm').addEventListener('submit', function(event) {
+document.getElementById('registrationForm')?.addEventListener('submit', function(event) {
     event.preventDefault();
     const newProfile = {
         id: profiles.length + 1,
@@ -5394,7 +5378,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
 // Generate default profile cards when the page loads
 generateDefaultProfileCards();
     </script>
-    </script>
+
 
 
 <!-- whats on your mind timeline-->
