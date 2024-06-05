@@ -32,13 +32,6 @@
 }
 
 
-
-
-
-
-
-
-
 .search-input {
     padding: 0px; /* Adjust as needed */
     border: none;
@@ -79,10 +72,10 @@
 
    
 
-        .container {
-            max-width: 1400px;
-            margin: 20px auto;
-            padding-top: 10px;
+ .container {
+    max-width: 1400px;    
+    margin: 20px auto;
+    padding-top: 10px;
         }
 
 
@@ -516,10 +509,12 @@
         margin: 10px auto;
         /* padding-top: 10px; */
         height: 85vh;
-        overflow-y: scroll
+        overflow: hidden;
+        
     }
 
-    .randomusers-container h2 {    
+    .randomusers-container h2 {  
+        z-index: 500;  
     color: #08539e;
     font-family: 'Times New Roman', Times, serif;
     letter-spacing: 2px;
@@ -528,7 +523,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     overflow-y: hidden;
-    position:relative;
+    position: sticky;
     top: 0; /* Adjust the distance from the top */
 }
 
@@ -590,8 +585,11 @@
         background-color: #4267B2; /* Facebook blue */
         border-color: #4267B2; /* Facebook blue */
         /* margin: 0px 20px; */
+        left: 0px;
         padding: 5px;
         font-size: 12px;
+        position: static;
+        
         
     }
 
@@ -604,6 +602,7 @@
         font-size: 15px;
         width: 90%;
         margin: auto;
+        position: relative;
 
         
     }
@@ -1059,11 +1058,13 @@
     font-size: 14px;
 }
 
- /* Hide scrollbar for Chrome, Safari, and Opera */
- .randomusers-container::-webkit-scrollbar,
-    .container::-webkit-scrollbar {
-        display: none;
+.randomusers-container, .container {
+        overflow-y: scroll;
     }
+.randomusers-container::-webkit-scrollbar,
+.container::-webkit-scrollbar {
+    display: none;
+}
 
      /* Styles for randomusers-container and container */
      .randomusers-container-border {
@@ -1130,6 +1131,7 @@
             max-width: 100%;
             margin: 0px auto;
             padding-top: 0px;
+            
         }
   
     .navbar-nav{
@@ -1138,6 +1140,7 @@
     flex-direction: row;
     gap: 2px;
     max-width: 100%;
+    background-color: red;
     }
 
     .nav-flex{
@@ -1516,7 +1519,7 @@
     .randomusers-container .viewportfolio{
         /* background-color: rgb(122, 93, 93); */
         position: relative;
-        left: 55px;
+        left: 0px;
         padding: 5px;
 
         
@@ -1904,11 +1907,13 @@
     font-size: 14px;
 }
 
- /* Hide scrollbar for Chrome, Safari, and Opera */
- .randomusers-container::-webkit-scrollbar,
-    .container::-webkit-scrollbar {
-        display: none;
+.randomusers-container, .container {
+        overflow-y: scroll;
     }
+.randomusers-container::-webkit-scrollbar,
+.container::-webkit-scrollbar {
+    display: none;
+}
 
      /* Styles for randomusers-container and container */
      .randomusers-container-border {
@@ -2376,7 +2381,7 @@
     .randomusers-container .viewportfolio{
         /* background-color: rgb(122, 93, 93); */
         position: relative;
-        left: 55px;
+        left: 0px;
         padding: 5px;
 
         
@@ -3746,6 +3751,10 @@ font-size: 10px;
 
 
 /* Hide scrollbar for Chrome, Safari, and Opera */
+
+.randomusers-container, .container {
+        overflow-y: scroll;
+    }
 .randomusers-container::-webkit-scrollbar,
 .container::-webkit-scrollbar {
     display: none;
@@ -4245,6 +4254,7 @@ font-size: 12px;
     width: 90%;
     padding: 0px;
     margin: auto;
+    left: 0px;
 
     
 }
@@ -4874,9 +4884,12 @@ color: white;
     <!-- Random Users Section -->
     <div class="randomusers-container">
         <div class="col mt-1 derandom">
+            <div class="random">
             <h2 class="text-center mb-4">Connecting Talents: Freelancer Hiring Across All Industries (Hire at Ease)</h2>
-            <div class="row" id="randomUsersContainer">
+            <div class="row" id="randomUsersContainer" >
                 <!-- Random user cards will be dynamically generated here -->
+            </div>
+        
             </div>
         </div>
     </div>
@@ -4990,7 +5003,7 @@ color: white;
 
     <!-- JavaScript for generating profile cards when there is no user -->
     <script>
-        // Define a default profile
+        // I Defined a default profile
         const defaultProfile = {
             id: 13,
             name: "Valentine Uchenna",
