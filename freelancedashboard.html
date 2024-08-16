@@ -2992,7 +2992,7 @@
         }
         
         header {
-            background-color: #2e4a92;      
+            background-color: #3957a4;      
             color: #fff;       
             padding: 5px 0;       
             text-align: center;      
@@ -3567,6 +3567,7 @@
         /* Feed Container */
         .feed-container {
        
+            width: 100%;
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -3575,6 +3576,8 @@
             height: 82vh;
             overflow-y: hidden;
             padding-bottom: 10px;
+            display: flex;
+            flex-direction: column;
         }
         
         .feed-container h2 {
@@ -3592,6 +3595,11 @@
             text-align: center;
         
         }
+        .post-options{
+            position: relative;
+            
+        }
+
         
         /* Placeholder */
         #postContent::placeholder {
@@ -5006,7 +5014,7 @@
                     </div>
                 </div>
             </div>
-            
+         
             <!-- Feed container -->
 
             <div class="col-lg-9 timeline">
@@ -5016,13 +5024,18 @@
                             <h2>Timeline feeds from users all around the world</h2>
                             <!-- Post Form -->
                             <form id="postForm" enctype="multipart/form-data">
-                                <textarea id="postContent" placeholder="What is new? show it to the world"></textarea>
-                                <div class="post-options">
-                                    <input type="file" id="fileInput" accept="image, video" multiple>
-                                    <label for="fileInput"><i class="fas fa-camera"></i></label>
-                                    <button type="submit">Post</button>
+                                <div class="post-container">
+                                    <textarea id="postContent" placeholder="What is new? Show it to the world"></textarea>
+                                    <div class="post-options">
+                                        <input type="file" id="fileInput" accept="image/*, video/*" multiple style="display: none;">
+                                        <label for="fileInput">
+                                            <i class="fas fa-camera" style="font-size: 24px; color: #4267B2; cursor: pointer;"></i>
+                                        </label>
+                                        <button type="submit">Post</button>
+                                    </div>
                                 </div>
                             </form>
+                            
                             <!-- End of Post Form -->
                     
                         <div class="feeds-container-area">
